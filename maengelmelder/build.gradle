@@ -1,5 +1,8 @@
 apply plugin: 'com.android.library'
 apply plugin: 'org.owasp.dependencycheck'
+apply plugin: 'maven-publish'
+
+ext.gmapApiKey = project.findProperty('default_google_map_apikey') ?: ''
 
 android {
     namespace "de.maengelmelder.mainmodule"
@@ -16,7 +19,7 @@ android {
         debug {
             buildConfigField "boolean", "debug", "true"
             buildConfigField 'int', 'VERSION_CODE', "30"
-            resValue 'string', 'gmap_api_key', default_google_map_apikey
+            resValue 'string', 'gmap_api_key', gmapApiKey
         }
         release {
             buildConfigField "boolean", "debug", "false"
@@ -26,10 +29,14 @@ android {
              * In your local environment,
              * the key "default_google_map_apikey" is set in ~/.gradle/gradle.properties
              */
-            resValue 'string', 'gmap_api_key', default_google_map_apikey
+            resValue 'string', 'gmap_api_key', gmapApiKey
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+
+    publishing {
+        singleVariant('release')
     }
 
     packagingOptions {
@@ -141,4 +148,17 @@ dependencies {
 repositories {
     mavenCentral()
 maven { url 'https://jitpack.io' }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = project.group
+                artifactId = 'maengelmelder'
+                version = project.version
+            }
+        }
+    }
 }
