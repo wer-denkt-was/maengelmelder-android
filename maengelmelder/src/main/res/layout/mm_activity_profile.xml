@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/mm_default_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:contentDescription="@string/acc_cd_profile_photo"
+                android:id="@+id/profile_img"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/add_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/profile_layout"
+                android:layout_marginTop="10dp"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical"
+                android:layout_below="@id/profile_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Subhead"
+                    android:background="@color/lightgray_transparent"
+                    android:text="@string/profile_name"
+                    android:importantForAccessibility="no"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/profile_name"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Subhead"
+                    android:background="@color/lightgray_transparent"
+                    android:text="@string/profile_email"
+                    android:importantForAccessibility="no"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/profile_email"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btn_logout"
+                    android:text="@string/logout"
+                    android:maxWidth="320dp"
+                    android:theme="@style/MMTheme.GeneralButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

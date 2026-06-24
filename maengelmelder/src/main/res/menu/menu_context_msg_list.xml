@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_sort_by_name"
+        android:title="@string/menu_sort_name"
+        android:contentDescription="@string/menu_sort_name"/>
+    <item
+        android:id="@+id/menu_sort_by_category"
+        android:title="@string/menu_sort_category"
+        android:contentDescription="@string/menu_sort_category"/>
+    <item
+        android:id="@+id/menu_sort_by_status"
+        android:title="@string/menu_sort_status"
+        android:contentDescription="@string/menu_sort_status"/>
+
+</menu>

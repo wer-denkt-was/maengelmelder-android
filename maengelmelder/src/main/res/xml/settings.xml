@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:title="@string/mm_prefcat_msg"
+        android:layout="@layout/mm_layout_pref_category"
+        app:iconSpaceReserved="false">
+        <CheckBoxPreference
+            app:iconSpaceReserved="false"
+            android:key="@string/mm_prefkey_show_image_on_list"
+            android:defaultValue="true"
+            android:title="@string/mm_preftitle_show_image_on_list"
+            android:summary="@string/mm_prefdesc_show_image_on_list"/>
+        <CheckBoxPreference
+            app:iconSpaceReserved="false"
+            android:key="@string/mm_prefkey_del_msg_after_upload"
+            android:defaultValue="false"
+            android:title="@string/mm_preftitle_del_msg_after_upload"
+            android:summary="@string/mm_prefdesc_del_msg_after_upload"/>
+        <CheckBoxPreference
+            app:iconSpaceReserved="false"
+            android:key="@string/mm_prefkey_del_images_after_upload"
+            android:defaultValue="false"
+            android:title="@string/mm_preftitle_del_images_after_upload"
+            android:summary="@string/mm_prefdesc_del_images_after_upload"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/mm_prefcat_logs"
+        android:key="@string/mm_prefcat_logs_key"
+        android:layout="@layout/mm_layout_pref_category"
+        app:iconSpaceReserved="false">
+        <CheckBoxPreference
+            app:iconSpaceReserved="false"
+            android:key="@string/mm_prefkey_should_log"
+            android:defaultValue="true"
+            android:title="@string/mm_preftitle_should_log"
+            android:summary="@string/mm_prefdesc_should_log"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/mm_prefcat_map"
+        android:layout="@layout/mm_layout_pref_category"
+        app:iconSpaceReserved="false">
+        <CheckBoxPreference
+            app:iconSpaceReserved="false"
+            android:key="@string/mm_prefkey_enableownloc"
+            android:defaultValue="true"
+            android:title="@string/mm_preftitle_enableownloc"
+            android:summary="@string/mm_prefdesc_enableownlog"/>
+
+        <CheckBoxPreference
+            app:iconSpaceReserved="false"
+            android:key="@string/mm_prefkey_satasdefaulttile"
+            android:defaultValue="false"
+            android:title="@string/mm_preftitle_satasdefaulttile"
+            android:summary="@string/mm_prefdesc_satasdefaulttile"/>
+    </PreferenceCategory>
+</PreferenceScreen>

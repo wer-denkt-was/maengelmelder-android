@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="bmsapi" translatable="false">bmsapi</string>
+
+    <!-- Default lat lon (0,0) -->
+    <string name="mm_default_lat" translatable="false">0</string>
+    <string name="mm_default_lon" translatable="false">0</string>
+
+    <!-- tables -->
+    <string name="mm_db_name" translatable="false">maengelmelder</string>
+    <integer name="mm_db_version" translatable="false">28</integer>
+
+    <!-- Deeplink settings -->
+    <string name="mm_deeplink_scheme" translatable="false">https</string>
+    <string name="mm_deeplink_path" translatable="false">/bms</string>
+
+    <!-- Outer link titles -->
+    <string name="mm_title_welcome">Wilkommen</string>
+    <string name="mm_title_about_app">Über diese App</string>
+    <string name="mm_title_usage">Nutzungsbedingungen</string>
+    <string name="mm_title_impressum">Impressum</string>
+    <string name="mm_title_data_protection">Datenschutz</string>
+
+    <!-- For custom fonts -->
+    <string name="mm_custom_font_normal_path"></string>
+    <string name="mm_custom_font_bold_path"></string>
+
+    <!-- This is the various additional modes that can be added to default mängelmelder mode -->
+    <!-- Separated by comma -->
+    <string name="mm_app_modes"></string>
+
+    <!-- Preferences -->
+    <string name="mm_prefcat_msg">Meldungen</string>
+    <string name="mm_prefcat_msg_upload">Meldung Hochladung</string>
+
+    <string name="mm_prefkey_del_msg_after_upload" translatable="false">wdw.mmv2.settings.del_msg_after_upload</string>
+    <string name="mm_preftitle_del_msg_after_upload">Meldungen nach Upload entfernen</string>
+    <string name="mm_prefdesc_del_msg_after_upload">Nach erfolgreichem Hochladen einer Meldung wird diese nicht mehr in der App gespeichert.</string>
+
+    <string name="mm_prefkey_del_images_after_upload" translatable="false">wdw.mmv2.settings.del_images_after_upload</string>
+    <string name="mm_preftitle_del_images_after_upload">Bilder nach Upload entfernen</string>
+    <string name="mm_prefdesc_del_images_after_upload">Nach erfolgreichem Hochladen einer Meldung werden die enthaltenen Bilder nicht mehr in der App gespeichert.</string>
+
+    <string name="mm_prefcat_msg_list">Liste der Meldungen</string>
+
+    <string name="mm_prefkey_show_image_on_list" translatable="false">wdw.mmv2.settings.show_img_on_list</string>
+    <string name="mm_preftitle_show_image_on_list">Vorschaubild in \"Meine Meldungen\"</string>
+    <string name="mm_prefdesc_show_image_on_list">In der Ansicht "Meine Meldungen" werden Vorschaubilder angezeigt. Wenn Sie diese Option entfernen, kann die Liste schneller geladen werden.</string>
+
+    <string name="mm_prefcat_logs">Historie</string>
+    <string name="mm_prefcat_logs_key" translatable="false">wdw.mmv2.settings.cat_history</string>
+
+    <string name="mm_prefkey_should_log" translatable="false">wdw.mmv2.settings.should_log</string>
+    <string name="mm_preftitle_should_log">Ihre Aktivitäten als Log speichern</string>
+    <string name="mm_prefdesc_should_log">Alle Aktivitäten wie Meldung erstellen, hochladen, entfernen, usw. werden als Log gespeichert. Sie können die Logs durch Überischtskarte-Menü &gt; Ihre Aktivitäten anschauen</string>
+
+    <string name="mm_prefcat_map">Karte</string>
+
+    <string name="mm_prefkey_enableownloc" translatable="false">wdw.mmv2.settings.enable_own_loc</string>
+    <string name="mm_preftitle_enableownloc">Standort erkennen</string>
+    <string name="mm_prefdesc_enableownlog">Die App darf Ihren aktuellen Standort erkennen und verwenden. Sofern dies nicht aktiviert ist, wird eine Standard-Position des Systems angezeigt.</string>
+
+    <string name="mm_prefkey_satasdefaulttile" translatable="false">wdw.mmv2.settings.satasdefaulttile</string>
+    <string name="mm_preftitle_satasdefaulttile">Satellitenansicht</string>
+    <string name="mm_prefdesc_satasdefaulttile">Auf allen Kartenansichten wird die Satellitenansicht als Standard voreingestellt.</string>
+
+</resources>

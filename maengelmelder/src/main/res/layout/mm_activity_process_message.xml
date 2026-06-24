@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/mm_default_toolbar" />
+
+        <TextView
+            android:padding="5dp"
+            android:accessibilityLiveRegion="polite"
+            android:visibility="gone"
+            android:text="@string/msg_creation_connection_not_available"
+            app:drawableStartCompat="@drawable/ic_drwtext_warn"
+            android:drawablePadding="10dp"
+            android:background="@color/lightgray_transparent"
+            android:id="@+id/txt_connection_monitor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <de.maengelmelder.mainmodule.customviews.SwipeToggleableViewPager
+            android:id="@+id/viewpager"
+            android:contentDescription="@string/acc_cd_message_process_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:contentDescription="@string/acc_cd_message_process_viewpager"
+            android:background="@color/mmcolor_tab_selected_bg"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:tabIndicatorHeight="0dp"
+            app:tabMode="scrollable"
+            app:tabGravity="fill"
+            app:tabPaddingTop="-1dp"
+            app:tabPaddingBottom="-1dp"
+            app:tabPaddingStart="-1dp"
+            app:tabPaddingEnd="-1dp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/connectivity_status"
+        android:visibility="gone"
+        android:padding="10dp"
+        android:layout_marginRight="-3dp"
+        android:src="@drawable/ic_no_connectivity"
+        android:background="@drawable/bg_networkstatus"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

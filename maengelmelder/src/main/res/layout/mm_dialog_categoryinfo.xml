@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:minWidth="250dp"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cat_overview"
+        android:focusable="false"
+        app:cardElevation="6dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/mm_listitem_category"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/cat_desc"
+        android:layout_below="@id/cat_overview"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="5dp"
+        android:scrollbars="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_close"
+        android:focusable="true"
+        android:layout_below="@id/cat_desc"
+        android:text="@string/cat_dialog_confirm"
+        android:maxWidth="320dp"
+        android:theme="@style/MMTheme.GeneralImageButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

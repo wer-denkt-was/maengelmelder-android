@@ -1,0 +1,21 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/transparent" />
+                    <stroke android:width="2dp" android:color="@color/mmcolor_btn_normal_bg" />
+                    <corners android:radius="8dp" />
+                </shape>
+            </item>
+
+            <item>
+                <bitmap
+                    android:gravity="right"
+                    android:src="@drawable/ic_spinner_dd_mark" />
+            </item>
+        </layer-list>
+    </item>
+
+</selector>

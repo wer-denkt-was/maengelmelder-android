@@ -1,0 +1,126 @@
+{
+  "success": true,
+  "data": [
+    {
+      "created": "2019-11-16T11:20:32",
+      "lon": 0.0,
+      "state": "checked",
+      "marker_id": 226,
+      "text": "Poller umgefahren, Behinderung auf Fußweg\n(Adresssuche nach: Musterweg)",
+      "lat": 0.0,
+      "state_german": "in Bearbeitung",
+      "message_type": {
+        "name": "Straßenschilder > Straßenschilder",
+        "id": 1,
+        "ordering": 1,
+        "description": "<p>Zu diesem Bereich gehören Beschädigungen und Mängel an:</p>\r\n<ul>\r\n<li>Straßenschildern</li>\r\n<li>Wegweisern</li>\r\n<li>Begrenzungspollern</li>\r\n</ul>\r\n\r\n<p>Diese Schäden werden vom Mängelmelder <b>nicht</b> bearbeitet:\r\n<ul>\r\n<li>Schilder, die von Pflanzen verdeckt werden</li>\r\n<li>Begrenzungen von Grünflächen</li>\r\n</ul>\r\n\r\n<p>Bei einer dringenden Verkehrsgefährdung rufen Sie bitte den Notruf an (Telefon-Nummer 110).</p>\r\n\r\n<p>Für weitere Informationen klicken Sie bitte <a href=\"https://bms.example-city.de/page/mm-process\" target=\"_blank\">hier</a>.</p>"
+      },
+      "marker_color": "yellow",
+      "id": 9100002,
+      "address": "Musterweg 6, 99999 Musterstadt, Germany",
+      "title": null,
+      "domain": {
+        "links": {
+          "self": {
+            "href": "/api/v1/domain/2"
+          }
+        },
+        "title": "Bürgerbeteiligung Musterstadt",
+        "id": 2,
+        "name": "bms.example-city.de"
+      }
+    },
+    {
+      "id": 9100003,
+      "address": "Beispielstraße 9, 99999 Musterstadt, Germany",
+      "title": null,
+      "domain": {
+        "title": "Bürgerbeteiligung Musterstadt",
+        "id": 2,
+        "name": "bms.example-city.de",
+        "links": {
+          "self": {
+            "href": "/api/v1/domain/2"
+          }
+        }
+      },
+      "text": "Bordstein steht hoch, ist nicht fest. Stolperfalle.",
+      "lat": 0.0,
+      "state_german": "Gelöst",
+      "message_type": {
+        "description": "<p>Sie können hier kleine Schäden auf Gehwegen melden. Kleine Schäden sind Schäden unter 2 Quadratmetern. Meistens sind das Schäden, die Sie auf dem Gehweg direkt sehen können. <b>Zum Beispiel</b> sogenannte Stolperkanten.</p>\r\n\r\n<p>Diese Schäden werden vom Mängelmelder <b>nicht</b> bearbeitet:</p>\r\n\r\n<ul>\r\n<li>Schäden auf privaten Grundstücken</li>\r\n<li>Schäden auf der Fahrbahn</li>\r\n<li>Schäden, die über 2 Quadratmeter groß sind</li>\r\n</ul>\r\n",
+        "ordering": 1,
+        "id": 10,
+        "name": "Gehwegschäden > Kleinere Gehwegschäden"
+      },
+      "marker_color": "green",
+      "marker_id": 200,
+      "created": "2019-10-28T12:38:07",
+      "lon": 0.0,
+      "state": "solved"
+    },
+    {
+      "lon": 0.0,
+      "created": "2019-07-05T09:38:17",
+      "state": "checked",
+      "marker_id": 204,
+      "lat": 0.0,
+      "state_german": "in Bearbeitung",
+      "text": "Seit mehreren Monaten herrenloses Fahrrad am Fahrradständer",
+      "marker_color": "yellow",
+      "message_type": {
+        "ordering": 1,
+        "description": "<p>Sie können hier <b>nur Fahrräder</b> melden, die <b>auf öffentlichen Flächen</b> stehen.\r\nFahrräder, die auf einem Privatgelände stehen, werden nicht bearbeitet.</p>\r\n\r\n<p>Schrott-Fahrräder sind:</p>\r\n<ul>\r\n<li>Fahrräder, die kaputt und nicht mehr zu fahren sind.<br>\r\nUnd seit mindestens drei Monaten an derselben Stelle stehen.</li>\r\n</ul> \r\n\r\n<p>Bitte fügen Sie Ihrer Meldung ein Foto des Fahrrades hinzu.</p>\r\n\r\n<p>Für weitere Informationen klicken Sie bitte <a href=\"https://bms.example-city.de/page/mm-process\" target=\"_blank\">hier</a>.</p>",
+        "name": "Schrottfahrräder > Schrottfahrräder",
+        "id": 6
+      },
+      "id": 9100004,
+      "address": "Beispielhaus, Beispielplatz 4 5, 99999 Musterstadt, Germany",
+      "domain": {
+        "links": {
+          "self": {
+            "href": "/api/v1/domain/2"
+          }
+        },
+        "name": "bms.example-city.de",
+        "id": 2,
+        "title": "Bürgerbeteiligung Musterstadt"
+      },
+      "title": null
+    },
+    {
+      "state": "checked",
+      "created": "2018-11-14T07:02:17",
+      "lon": 0.0,
+      "marker_id": 210,
+      "message_type": {
+        "id": 7,
+        "name": "Beleuchtung > Beleuchtung",
+        "description": "<p>Sie können hier <b>nur eine Straßenbeleuchtung</b> melden, die im <b>öffentlichen Raum</b> steht.\r\nFür private Straßenlaternen ist die Stadt Musterstadt nicht zuständig.</p>\r\n<p>Für weitere Informationen klicken Sie bitte <a href=\"https://bms.example-city.de/page/mm-process\" target=\"_blank\">hier</a>.</p>",
+        "ordering": 1
+      },
+      "marker_color": "yellow",
+      "text": "Auf dem Geh-Radweg ist kommend von der Musterallee die 5 und 6 Laterne defekt. Die Störung besteht weiterhin.\nZwischen den beiden Laternen steht aktuell ein Bauzaun, ggf. hilft dies bei der Lokalisierung der Lampen",
+      "lat": 0.0,
+      "state_german": "in Bearbeitung",
+      "title": null,
+      "domain": {
+        "links": {
+          "self": {
+            "href": "/api/v1/domain/2"
+          }
+        },
+        "title": "Bürgerbeteiligung Musterstadt",
+        "id": 2,
+        "name": "bms.example-city.de"
+      },
+      "id": 9100005,
+      "address": "Teststraße 111, 99999 Musterstadt, Germany"
+    }
+  ],
+  "pager": {
+    "total_entries": 4,
+    "entries_per_page": 50,
+    "current_page": 1
+  }
+}

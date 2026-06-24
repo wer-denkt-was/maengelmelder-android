@@ -1,0 +1,1623 @@
+{
+  "success": true,
+  "data": {
+    "primary_domain": {
+      "links": {
+        "self": {
+          "href": "/api/v1/domain/32/bms"
+        },
+        "web": {
+          "href": "https://www.xn--mngelmelder-l8a.de/bms"
+        },
+        "web_message_create": {
+          "href": "https://www.xn--mngelmelder-l8a.de/bms/create"
+        }
+      },
+      "icon_set": "square",
+      "id": 32,
+      "settings": {},
+      "use_groups": 0,
+      "name": "Mängelmelder.de"
+    },
+    "allow_default": 1,
+    "types": [
+      {
+        "responsible": {
+          "id": 38155,
+          "avatar_uri": "https://static.example.org/avatar/2034689223-256.png",
+          "internal_name_long": "Moderation",
+          "links": {
+            "self": {
+              "href": "/api/v1/domain/32/user/38155"
+            }
+          },
+          "public_name": "Moderation"
+        },
+        "bms": {
+          "icon_set": "square",
+          "links": {
+            "web_message_create": {
+              "href": "https://www.xn--mngelmelder-l8a.de/bms/create"
+            },
+            "web": {
+              "href": "https://www.xn--mngelmelder-l8a.de/bms"
+            },
+            "self": {
+              "href": "/api/v1/domain/32/bms"
+            }
+          },
+          "name": "Mängelmelder.de",
+          "use_groups": 0,
+          "id": 32
+        },
+        "attributes": [
+          {
+            "name": "Vorname",
+            "public": 0,
+            "ordering": 2,
+            "group": null,
+            "required_admin": 0,
+            "values": [],
+            "visible_to": "both",
+            "id": 18,
+            "multiselect": 0,
+            "default_value": null,
+            "error": "Fehlermeldung",
+            "regex": null,
+            "required_if_value": null,
+            "cached": 1,
+            "required_for_user": false,
+            "visible_if_value": null,
+            "type": "text",
+            "help": "Die Angabe Ihres Vornamens ist freiwillig.",
+            "visible_if_code": null,
+            "code": "first_name",
+            "required": 0,
+            "required_if_code": null,
+            "relation_data": {},
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/18"
+              }
+            }
+          },
+          {
+            "required": 0,
+            "required_if_code": null,
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/19"
+              }
+            },
+            "relation_data": {},
+            "code": "last_name",
+            "visible_if_code": null,
+            "required_if_value": null,
+            "visible_if_value": null,
+            "required_for_user": false,
+            "cached": 1,
+            "type": "text",
+            "help": "Die Angabe Ihres Nachnamens ist freiwillig.",
+            "error": "Fehlermeldung",
+            "regex": null,
+            "multiselect": 0,
+            "default_value": null,
+            "values": [],
+            "visible_to": "both",
+            "id": 19,
+            "required_admin": 0,
+            "name": "Nachname",
+            "public": 0,
+            "ordering": 3,
+            "group": null
+          },
+          {
+            "required_if_value": null,
+            "type": "text",
+            "visible_if_value": null,
+            "cached": 1,
+            "required_for_user": true,
+            "help": "Die Eingabe der E-Mail-Adresse ist Pflicht.",
+            "error": "Bitte geben Sie Ihre E-Mail Adresse an.",
+            "regex": "^.+\\@.+$",
+            "required": 1,
+            "required_if_code": null,
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/20"
+              }
+            },
+            "relation_data": {},
+            "code": "email",
+            "visible_if_code": null,
+            "required_admin": 0,
+            "name": "E-Mail-Adresse",
+            "public": 0,
+            "ordering": 4,
+            "group": "",
+            "multiselect": 0,
+            "default_value": "",
+            "values": [],
+            "visible_to": "both",
+            "id": 20
+          }
+        ],
+        "id": 70,
+        "marker_class": "bms-square-created-219",
+        "position": "required",
+        "private": 0,
+        "has_title": 0,
+        "ordering": 1,
+        "group": null,
+        "markerid": 219,
+        "name": "Anregungen und Lob",
+        "photo": "optional",
+        "links": {
+          "self": {
+            "href": "/api/v1/domain/32/type/70"
+          },
+          "responsible": {
+            "href": "/api/v1/domain/32/user/38155"
+          },
+          "domain": {
+            "href": "/api/v1/domain/32"
+          }
+        },
+        "description": "",
+        "domain": {
+          "name": "www.xn--mngelmelder-l8a.de",
+          "id": 32,
+          "title": "Mängelmelder.de",
+          "links": {
+            "self": {
+              "href": "/api/v1/domain/32"
+            }
+          }
+        }
+      },
+      {
+        "description": "",
+        "links": {
+          "domain": {
+            "href": "/api/v1/domain/32"
+          },
+          "self": {
+            "href": "/api/v1/domain/32/type/71"
+          },
+          "responsible": {
+            "href": "/api/v1/domain/32/user/38155"
+          }
+        },
+        "photo": "optional",
+        "domain": {
+          "title": "Mängelmelder.de",
+          "links": {
+            "self": {
+              "href": "/api/v1/domain/32"
+            }
+          },
+          "name": "www.xn--mngelmelder-l8a.de",
+          "id": 32
+        },
+        "attributes": [
+          {
+            "visible_to": "both",
+            "id": 17,
+            "values": [],
+            "default_value": "",
+            "multiselect": 0,
+            "ordering": 1,
+            "group": "",
+            "public": 1,
+            "name": "Mastnummer",
+            "required_admin": 0,
+            "code": "mastnummer",
+            "visible_if_code": null,
+            "required_if_code": null,
+            "relation_data": {},
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/17"
+              }
+            },
+            "required": 0,
+            "regex": null,
+            "error": "Die Mastnummer ist erforderlich, um die Laterne zu finden.",
+            "cached": 0,
+            "required_for_user": false,
+            "visible_if_value": null,
+            "type": "text",
+            "help": "Bitte geben Sie die Mastnummer der Laterne an.",
+            "required_if_value": null
+          },
+          {
+            "ordering": 2,
+            "group": null,
+            "name": "Vorname",
+            "public": 0,
+            "required_admin": 0,
+            "visible_to": "both",
+            "id": 18,
+            "values": [],
+            "default_value": null,
+            "multiselect": 0,
+            "regex": null,
+            "error": "Fehlermeldung",
+            "required_for_user": false,
+            "cached": 1,
+            "visible_if_value": null,
+            "type": "text",
+            "help": "Die Angabe Ihres Vornamens ist freiwillig.",
+            "required_if_value": null,
+            "code": "first_name",
+            "visible_if_code": null,
+            "required_if_code": null,
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/18"
+              }
+            },
+            "relation_data": {},
+            "required": 0
+          },
+          {
+            "group": null,
+            "ordering": 3,
+            "public": 0,
+            "name": "Nachname",
+            "required_admin": 0,
+            "id": 19,
+            "visible_to": "both",
+            "values": [],
+            "default_value": null,
+            "multiselect": 0,
+            "regex": null,
+            "error": "Fehlermeldung",
+            "help": "Die Angabe Ihres Nachnamens ist freiwillig.",
+            "visible_if_value": null,
+            "required_for_user": false,
+            "cached": 1,
+            "type": "text",
+            "required_if_value": null,
+            "code": "last_name",
+            "visible_if_code": null,
+            "relation_data": {},
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/19"
+              }
+            },
+            "required_if_code": null,
+            "required": 0
+          },
+          {
+            "required": 1,
+            "required_if_code": null,
+            "relation_data": {},
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/20"
+              }
+            },
+            "code": "email",
+            "visible_if_code": null,
+            "required_if_value": null,
+            "required_for_user": true,
+            "cached": 1,
+            "visible_if_value": null,
+            "type": "text",
+            "help": "Die Eingabe der E-Mail-Adresse ist Pflicht.",
+            "error": "Bitte geben Sie Ihre E-Mail Adresse an.",
+            "regex": "^.+\\@.+$",
+            "multiselect": 0,
+            "default_value": "",
+            "values": [],
+            "visible_to": "both",
+            "id": 20,
+            "required_admin": 0,
+            "name": "E-Mail-Adresse",
+            "public": 0,
+            "ordering": 4,
+            "group": ""
+          }
+        ],
+        "id": 71,
+        "bms": {
+          "name": "Mängelmelder.de",
+          "id": 32,
+          "use_groups": 0,
+          "links": {
+            "web_message_create": {
+              "href": "https://www.xn--mngelmelder-l8a.de/bms/create"
+            },
+            "self": {
+              "href": "/api/v1/domain/32/bms"
+            },
+            "web": {
+              "href": "https://www.xn--mngelmelder-l8a.de/bms"
+            }
+          },
+          "icon_set": "square"
+        },
+        "responsible": {
+          "public_name": "Moderation",
+          "links": {
+            "self": {
+              "href": "/api/v1/domain/32/user/38155"
+            }
+          },
+          "avatar_uri": "https://static.example.org/avatar/2034689223-256.png",
+          "internal_name_long": "Moderation",
+          "id": 38155
+        },
+        "name": "Beleuchtung",
+        "markerid": 210,
+        "group": null,
+        "ordering": 1,
+        "has_title": 0,
+        "private": 0,
+        "position": "required",
+        "marker_class": "bms-square-created-210"
+      },
+      {
+        "domain": {
+          "links": {
+            "self": {
+              "href": "/api/v1/domain/32"
+            }
+          },
+          "title": "Mängelmelder.de",
+          "id": 32,
+          "name": "www.xn--mngelmelder-l8a.de"
+        },
+        "description": "",
+        "links": {
+          "responsible": {
+            "href": "/api/v1/domain/32/user/38155"
+          },
+          "self": {
+            "href": "/api/v1/domain/32/type/956"
+          },
+          "domain": {
+            "href": "/api/v1/domain/32"
+          }
+        },
+        "photo": "optional",
+        "group": null,
+        "ordering": 1,
+        "name": "Beschädigungen",
+        "markerid": 230,
+        "has_title": 0,
+        "position": "required",
+        "marker_class": "bms-square-created-230",
+        "private": 0,
+        "id": 956,
+        "attributes": [
+          {
+            "public": 0,
+            "name": "Vorname",
+            "ordering": 2,
+            "group": null,
+            "required_admin": 0,
+            "values": [],
+            "visible_to": "both",
+            "id": 18,
+            "multiselect": 0,
+            "default_value": null,
+            "error": "Fehlermeldung",
+            "regex": null,
+            "required_if_value": null,
+            "visible_if_value": null,
+            "required_for_user": false,
+            "type": "text",
+            "cached": 1,
+            "help": "Die Angabe Ihres Vornamens ist freiwillig.",
+            "visible_if_code": null,
+            "code": "first_name",
+            "required": 0,
+            "required_if_code": null,
+            "relation_data": {
+              "target": "message"
+            },
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/18"
+              }
+            }
+          },
+          {
+            "error": "Fehlermeldung",
+            "regex": null,
+            "required_if_value": null,
+            "help": "Die Angabe Ihres Nachnamens ist freiwillig.",
+            "visible_if_value": null,
+            "cached": 1,
+            "required_for_user": false,
+            "type": "text",
+            "code": "last_name",
+            "visible_if_code": null,
+            "required": 0,
+            "relation_data": {
+              "target": "message"
+            },
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/19"
+              }
+            },
+            "required_if_code": null,
+            "public": 0,
+            "name": "Nachname",
+            "group": null,
+            "ordering": 3,
+            "required_admin": 0,
+            "values": [],
+            "id": 19,
+            "visible_to": "both",
+            "multiselect": 0,
+            "default_value": null
+          },
+          {
+            "visible_if_code": null,
+            "code": "email",
+            "required_if_code": null,
+            "relation_data": {
+              "target": "message"
+            },
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/20"
+              }
+            },
+            "required": 1,
+            "regex": "^.+\\@.+$",
+            "error": "Bitte geben Sie Ihre E-Mail Adresse an.",
+            "visible_if_value": null,
+            "required_for_user": true,
+            "cached": 1,
+            "type": "text",
+            "help": "Die Eingabe der E-Mail-Adresse ist Pflicht.",
+            "required_if_value": null,
+            "visible_to": "both",
+            "id": 20,
+            "values": [],
+            "default_value": "",
+            "multiselect": 0,
+            "ordering": 4,
+            "group": "",
+            "name": "E-Mail-Adresse",
+            "public": 0,
+            "required_admin": 0
+          }
+        ],
+        "bms": {
+          "links": {
+            "web_message_create": {
+              "href": "https://www.xn--mngelmelder-l8a.de/bms/create"
+            },
+            "web": {
+              "href": "https://www.xn--mngelmelder-l8a.de/bms"
+            },
+            "self": {
+              "href": "/api/v1/domain/32/bms"
+            }
+          },
+          "icon_set": "square",
+          "name": "Mängelmelder.de",
+          "id": 32,
+          "use_groups": 0
+        },
+        "responsible": {
+          "avatar_uri": "https://static.example.org/avatar/2034689223-256.png",
+          "internal_name_long": "Moderation",
+          "id": 38155,
+          "public_name": "Moderation",
+          "links": {
+            "self": {
+              "href": "/api/v1/domain/32/user/38155"
+            }
+          }
+        }
+      },
+      {
+        "attributes": [
+          {
+            "multiselect": 0,
+            "default_value": null,
+            "values": [],
+            "id": 18,
+            "visible_to": "both",
+            "required_admin": 0,
+            "name": "Vorname",
+            "public": 0,
+            "group": null,
+            "ordering": 2,
+            "required": 0,
+            "relation_data": {},
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/18"
+              }
+            },
+            "required_if_code": null,
+            "visible_if_code": null,
+            "code": "first_name",
+            "required_if_value": null,
+            "help": "Die Angabe Ihres Vornamens ist freiwillig.",
+            "visible_if_value": null,
+            "required_for_user": false,
+            "type": "text",
+            "cached": 1,
+            "error": "Fehlermeldung",
+            "regex": null
+          },
+          {
+            "required_admin": 0,
+            "ordering": 3,
+            "group": null,
+            "name": "Nachname",
+            "public": 0,
+            "default_value": null,
+            "multiselect": 0,
+            "visible_to": "both",
+            "id": 19,
+            "values": [],
+            "cached": 1,
+            "required_for_user": false,
+            "visible_if_value": null,
+            "type": "text",
+            "help": "Die Angabe Ihres Nachnamens ist freiwillig.",
+            "required_if_value": null,
+            "regex": null,
+            "error": "Fehlermeldung",
+            "required_if_code": null,
+            "relation_data": {},
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/19"
+              }
+            },
+            "required": 0,
+            "visible_if_code": null,
+            "code": "last_name"
+          },
+          {
+            "id": 20,
+            "visible_to": "both",
+            "values": [],
+            "default_value": "",
+            "multiselect": 0,
+            "group": "",
+            "ordering": 4,
+            "public": 0,
+            "name": "E-Mail-Adresse",
+            "required_admin": 0,
+            "code": "email",
+            "visible_if_code": null,
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/20"
+              }
+            },
+            "relation_data": {},
+            "required_if_code": null,
+            "required": 1,
+            "regex": "^.+\\@.+$",
+            "error": "Bitte geben Sie Ihre E-Mail Adresse an.",
+            "help": "Die Eingabe der E-Mail-Adresse ist Pflicht.",
+            "required_for_user": true,
+            "visible_if_value": null,
+            "cached": 1,
+            "type": "text",
+            "required_if_value": null
+          }
+        ],
+        "id": 67,
+        "bms": {
+          "use_groups": 0,
+          "id": 32,
+          "name": "Mängelmelder.de",
+          "icon_set": "square",
+          "links": {
+            "web": {
+              "href": "https://www.xn--mngelmelder-l8a.de/bms"
+            },
+            "self": {
+              "href": "/api/v1/domain/32/bms"
+            },
+            "web_message_create": {
+              "href": "https://www.xn--mngelmelder-l8a.de/bms/create"
+            }
+          }
+        },
+        "responsible": {
+          "avatar_uri": "https://static.example.org/avatar/2034689223-256.png",
+          "internal_name_long": "Moderation",
+          "id": 38155,
+          "public_name": "Moderation",
+          "links": {
+            "self": {
+              "href": "/api/v1/domain/32/user/38155"
+            }
+          }
+        },
+        "group": null,
+        "ordering": 1,
+        "name": "Grünflächen",
+        "markerid": 207,
+        "has_title": 0,
+        "marker_class": "bms-square-created-207",
+        "position": "required",
+        "private": 0,
+        "description": "",
+        "links": {
+          "responsible": {
+            "href": "/api/v1/domain/32/user/38155"
+          },
+          "self": {
+            "href": "/api/v1/domain/32/type/67"
+          },
+          "domain": {
+            "href": "/api/v1/domain/32"
+          }
+        },
+        "photo": "optional",
+        "domain": {
+          "id": 32,
+          "name": "www.xn--mngelmelder-l8a.de",
+          "links": {
+            "self": {
+              "href": "/api/v1/domain/32"
+            }
+          },
+          "title": "Mängelmelder.de"
+        }
+      },
+      {
+        "marker_class": "bms-square-created-211",
+        "position": "required",
+        "private": 0,
+        "has_title": 0,
+        "markerid": 211,
+        "name": "Hundekot",
+        "ordering": 1,
+        "group": null,
+        "responsible": {
+          "id": 38155,
+          "avatar_uri": "https://static.example.org/avatar/2034689223-256.png",
+          "internal_name_long": "Moderation",
+          "links": {
+            "self": {
+              "href": "/api/v1/domain/32/user/38155"
+            }
+          },
+          "public_name": "Moderation"
+        },
+        "bms": {
+          "icon_set": "square",
+          "links": {
+            "web_message_create": {
+              "href": "https://www.xn--mngelmelder-l8a.de/bms/create"
+            },
+            "self": {
+              "href": "/api/v1/domain/32/bms"
+            },
+            "web": {
+              "href": "https://www.xn--mngelmelder-l8a.de/bms"
+            }
+          },
+          "name": "Mängelmelder.de",
+          "use_groups": 0,
+          "id": 32
+        },
+        "id": 128,
+        "attributes": [
+          {
+            "group": null,
+            "ordering": 2,
+            "public": 0,
+            "name": "Vorname",
+            "required_admin": 0,
+            "id": 18,
+            "visible_to": "both",
+            "values": [],
+            "default_value": null,
+            "multiselect": 0,
+            "regex": null,
+            "error": "Fehlermeldung",
+            "help": "Die Angabe Ihres Vornamens ist freiwillig.",
+            "cached": 1,
+            "required_for_user": false,
+            "visible_if_value": null,
+            "type": "text",
+            "required_if_value": null,
+            "visible_if_code": null,
+            "code": "first_name",
+            "relation_data": {},
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/18"
+              }
+            },
+            "required_if_code": null,
+            "required": 0
+          },
+          {
+            "visible_to": "both",
+            "id": 19,
+            "values": [],
+            "default_value": null,
+            "multiselect": 0,
+            "ordering": 3,
+            "group": null,
+            "public": 0,
+            "name": "Nachname",
+            "required_admin": 0,
+            "code": "last_name",
+            "visible_if_code": null,
+            "required_if_code": null,
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/19"
+              }
+            },
+            "relation_data": {},
+            "required": 0,
+            "regex": null,
+            "error": "Fehlermeldung",
+            "required_for_user": false,
+            "visible_if_value": null,
+            "cached": 1,
+            "type": "text",
+            "help": "Die Angabe Ihres Nachnamens ist freiwillig.",
+            "required_if_value": null
+          },
+          {
+            "public": 0,
+            "name": "E-Mail-Adresse",
+            "group": "",
+            "ordering": 4,
+            "required_admin": 0,
+            "values": [],
+            "id": 20,
+            "visible_to": "both",
+            "multiselect": 0,
+            "default_value": "",
+            "error": "Bitte geben Sie Ihre E-Mail Adresse an.",
+            "regex": "^.+\\@.+$",
+            "required_if_value": null,
+            "help": "Die Eingabe der E-Mail-Adresse ist Pflicht.",
+            "required_for_user": true,
+            "cached": 1,
+            "visible_if_value": null,
+            "type": "text",
+            "code": "email",
+            "visible_if_code": null,
+            "required": 1,
+            "relation_data": {
+              "target": "message"
+            },
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/20"
+              }
+            },
+            "required_if_code": null
+          }
+        ],
+        "domain": {
+          "name": "www.xn--mngelmelder-l8a.de",
+          "id": 32,
+          "title": "Mängelmelder.de",
+          "links": {
+            "self": {
+              "href": "/api/v1/domain/32"
+            }
+          }
+        },
+        "photo": "optional",
+        "links": {
+          "domain": {
+            "href": "/api/v1/domain/32"
+          },
+          "self": {
+            "href": "/api/v1/domain/32/type/128"
+          },
+          "responsible": {
+            "href": "/api/v1/domain/32/user/38155"
+          }
+        },
+        "description": ""
+      },
+      {
+        "photo": "optional",
+        "links": {
+          "domain": {
+            "href": "/api/v1/domain/32"
+          },
+          "responsible": {
+            "href": "/api/v1/domain/32/user/38155"
+          },
+          "self": {
+            "href": "/api/v1/domain/32/type/64"
+          }
+        },
+        "description": "",
+        "domain": {
+          "id": 32,
+          "name": "www.xn--mngelmelder-l8a.de",
+          "links": {
+            "self": {
+              "href": "/api/v1/domain/32"
+            }
+          },
+          "title": "Mängelmelder.de"
+        },
+        "responsible": {
+          "public_name": "Moderation",
+          "links": {
+            "self": {
+              "href": "/api/v1/domain/32/user/38155"
+            }
+          },
+          "internal_name_long": "Moderation",
+          "avatar_uri": "https://static.example.org/avatar/2034689223-256.png",
+          "id": 38155
+        },
+        "bms": {
+          "name": "Mängelmelder.de",
+          "use_groups": 0,
+          "id": 32,
+          "icon_set": "square",
+          "links": {
+            "web_message_create": {
+              "href": "https://www.xn--mngelmelder-l8a.de/bms/create"
+            },
+            "self": {
+              "href": "/api/v1/domain/32/bms"
+            },
+            "web": {
+              "href": "https://www.xn--mngelmelder-l8a.de/bms"
+            }
+          }
+        },
+        "id": 64,
+        "attributes": [
+          {
+            "required_if_value": null,
+            "help": "Die Angabe Ihres Vornamens ist freiwillig.",
+            "type": "text",
+            "visible_if_value": null,
+            "cached": 1,
+            "required_for_user": false,
+            "error": "Fehlermeldung",
+            "regex": null,
+            "required": 0,
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/18"
+              }
+            },
+            "relation_data": {},
+            "required_if_code": null,
+            "visible_if_code": null,
+            "code": "first_name",
+            "required_admin": 0,
+            "public": 0,
+            "name": "Vorname",
+            "group": null,
+            "ordering": 2,
+            "multiselect": 0,
+            "default_value": null,
+            "values": [],
+            "id": 18,
+            "visible_to": "both"
+          },
+          {
+            "required": 0,
+            "relation_data": {},
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/19"
+              }
+            },
+            "required_if_code": null,
+            "visible_if_code": null,
+            "code": "last_name",
+            "required_if_value": null,
+            "help": "Die Angabe Ihres Nachnamens ist freiwillig.",
+            "required_for_user": false,
+            "visible_if_value": null,
+            "cached": 1,
+            "type": "text",
+            "error": "Fehlermeldung",
+            "regex": null,
+            "multiselect": 0,
+            "default_value": null,
+            "values": [],
+            "id": 19,
+            "visible_to": "both",
+            "required_admin": 0,
+            "public": 0,
+            "name": "Nachname",
+            "group": null,
+            "ordering": 3
+          },
+          {
+            "group": "",
+            "ordering": 4,
+            "public": 0,
+            "name": "E-Mail-Adresse",
+            "required_admin": 0,
+            "id": 20,
+            "visible_to": "both",
+            "values": [],
+            "default_value": "",
+            "multiselect": 0,
+            "regex": "^.+\\@.+$",
+            "error": "Bitte geben Sie Ihre E-Mail Adresse an.",
+            "help": "Die Eingabe der E-Mail-Adresse ist Pflicht.",
+            "required_for_user": true,
+            "visible_if_value": null,
+            "cached": 1,
+            "type": "text",
+            "required_if_value": null,
+            "code": "email",
+            "visible_if_code": null,
+            "relation_data": {},
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/20"
+              }
+            },
+            "required_if_code": null,
+            "required": 1
+          }
+        ],
+        "marker_class": "bms-square-created-202",
+        "position": "required",
+        "private": 0,
+        "has_title": 0,
+        "markerid": 202,
+        "name": "Illegaler Müll",
+        "ordering": 1,
+        "group": null
+      },
+      {
+        "responsible": {
+          "avatar_uri": "https://static.example.org/avatar/2034689223-256.png",
+          "id": 38155,
+          "internal_name_long": "Moderation",
+          "links": {
+            "self": {
+              "href": "/api/v1/domain/32/user/38155"
+            }
+          },
+          "public_name": "Moderation"
+        },
+        "bms": {
+          "name": "Mängelmelder.de",
+          "id": 32,
+          "use_groups": 0,
+          "links": {
+            "self": {
+              "href": "/api/v1/domain/32/bms"
+            },
+            "web": {
+              "href": "https://www.xn--mngelmelder-l8a.de/bms"
+            },
+            "web_message_create": {
+              "href": "https://www.xn--mngelmelder-l8a.de/bms/create"
+            }
+          },
+          "icon_set": "square"
+        },
+        "id": 66,
+        "attributes": [
+          {
+            "ordering": 2,
+            "group": null,
+            "public": 0,
+            "name": "Vorname",
+            "required_admin": 0,
+            "visible_to": "both",
+            "id": 18,
+            "values": [],
+            "default_value": null,
+            "multiselect": 0,
+            "regex": null,
+            "error": "Fehlermeldung",
+            "required_for_user": false,
+            "visible_if_value": null,
+            "cached": 1,
+            "type": "text",
+            "help": "Die Angabe Ihres Vornamens ist freiwillig.",
+            "required_if_value": null,
+            "code": "first_name",
+            "visible_if_code": null,
+            "required_if_code": null,
+            "relation_data": {},
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/18"
+              }
+            },
+            "required": 0
+          },
+          {
+            "code": "last_name",
+            "visible_if_code": null,
+            "required_if_code": null,
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/19"
+              }
+            },
+            "relation_data": {},
+            "required": 0,
+            "regex": null,
+            "error": "Fehlermeldung",
+            "cached": 1,
+            "required_for_user": false,
+            "visible_if_value": null,
+            "type": "text",
+            "help": "Die Angabe Ihres Nachnamens ist freiwillig.",
+            "required_if_value": null,
+            "visible_to": "both",
+            "id": 19,
+            "values": [],
+            "default_value": null,
+            "multiselect": 0,
+            "ordering": 3,
+            "group": null,
+            "name": "Nachname",
+            "public": 0,
+            "required_admin": 0
+          },
+          {
+            "id": 20,
+            "visible_to": "both",
+            "values": [],
+            "default_value": "",
+            "multiselect": 0,
+            "group": "",
+            "ordering": 4,
+            "public": 0,
+            "name": "E-Mail-Adresse",
+            "required_admin": 0,
+            "code": "email",
+            "visible_if_code": null,
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/20"
+              }
+            },
+            "relation_data": {},
+            "required_if_code": null,
+            "required": 1,
+            "regex": "^.+\\@.+$",
+            "error": "Bitte geben Sie Ihre E-Mail Adresse an.",
+            "help": "Die Eingabe der E-Mail-Adresse ist Pflicht.",
+            "required_for_user": true,
+            "visible_if_value": null,
+            "cached": 1,
+            "type": "text",
+            "required_if_value": null
+          }
+        ],
+        "marker_class": "bms-square-created-204",
+        "position": "required",
+        "private": 0,
+        "has_title": 0,
+        "ordering": 1,
+        "group": null,
+        "markerid": 204,
+        "name": "Radwege",
+        "photo": "optional",
+        "links": {
+          "self": {
+            "href": "/api/v1/domain/32/type/66"
+          },
+          "responsible": {
+            "href": "/api/v1/domain/32/user/38155"
+          },
+          "domain": {
+            "href": "/api/v1/domain/32"
+          }
+        },
+        "description": "",
+        "domain": {
+          "name": "www.xn--mngelmelder-l8a.de",
+          "id": 32,
+          "title": "Mängelmelder.de",
+          "links": {
+            "self": {
+              "href": "/api/v1/domain/32"
+            }
+          }
+        }
+      },
+      {
+        "domain": {
+          "name": "www.xn--mngelmelder-l8a.de",
+          "id": 32,
+          "title": "Mängelmelder.de",
+          "links": {
+            "self": {
+              "href": "/api/v1/domain/32"
+            }
+          }
+        },
+        "description": "",
+        "links": {
+          "self": {
+            "href": "/api/v1/domain/32/type/285"
+          },
+          "responsible": {
+            "href": "/api/v1/domain/32/user/38155"
+          },
+          "domain": {
+            "href": "/api/v1/domain/32"
+          }
+        },
+        "photo": "optional",
+        "name": "Spielplätze",
+        "markerid": 213,
+        "group": null,
+        "ordering": 1,
+        "has_title": 0,
+        "marker_class": "bms-square-created-213",
+        "position": "required",
+        "private": 0,
+        "attributes": [
+          {
+            "id": 18,
+            "visible_to": "both",
+            "values": [],
+            "default_value": null,
+            "multiselect": 0,
+            "group": null,
+            "ordering": 2,
+            "name": "Vorname",
+            "public": 0,
+            "required_admin": 0,
+            "visible_if_code": null,
+            "code": "first_name",
+            "relation_data": {},
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/18"
+              }
+            },
+            "required_if_code": null,
+            "required": 0,
+            "regex": null,
+            "error": "Fehlermeldung",
+            "help": "Die Angabe Ihres Vornamens ist freiwillig.",
+            "visible_if_value": null,
+            "type": "text",
+            "required_for_user": false,
+            "cached": 1,
+            "required_if_value": null
+          },
+          {
+            "required_for_user": false,
+            "type": "text",
+            "cached": 1,
+            "visible_if_value": null,
+            "help": "Die Angabe Ihres Nachnamens ist freiwillig.",
+            "required_if_value": null,
+            "regex": null,
+            "error": "Fehlermeldung",
+            "required_if_code": null,
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/19"
+              }
+            },
+            "relation_data": {},
+            "required": 0,
+            "visible_if_code": null,
+            "code": "last_name",
+            "required_admin": 0,
+            "ordering": 3,
+            "group": null,
+            "public": 0,
+            "name": "Nachname",
+            "default_value": null,
+            "multiselect": 0,
+            "visible_to": "both",
+            "id": 19,
+            "values": []
+          },
+          {
+            "required_if_value": null,
+            "help": "Die Eingabe der E-Mail-Adresse ist Pflicht.",
+            "visible_if_value": null,
+            "type": "text",
+            "required_for_user": true,
+            "cached": 1,
+            "error": "Bitte geben Sie Ihre E-Mail Adresse an.",
+            "regex": "^.+\\@.+$",
+            "required": 1,
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/20"
+              }
+            },
+            "relation_data": {},
+            "required_if_code": null,
+            "visible_if_code": null,
+            "code": "email",
+            "required_admin": 0,
+            "public": 0,
+            "name": "E-Mail-Adresse",
+            "group": "",
+            "ordering": 4,
+            "multiselect": 0,
+            "default_value": "",
+            "values": [],
+            "id": 20,
+            "visible_to": "both"
+          }
+        ],
+        "id": 285,
+        "bms": {
+          "links": {
+            "web_message_create": {
+              "href": "https://www.xn--mngelmelder-l8a.de/bms/create"
+            },
+            "self": {
+              "href": "/api/v1/domain/32/bms"
+            },
+            "web": {
+              "href": "https://www.xn--mngelmelder-l8a.de/bms"
+            }
+          },
+          "icon_set": "square",
+          "id": 32,
+          "use_groups": 0,
+          "name": "Mängelmelder.de"
+        },
+        "responsible": {
+          "links": {
+            "self": {
+              "href": "/api/v1/domain/32/user/38155"
+            }
+          },
+          "public_name": "Moderation",
+          "id": 38155,
+          "internal_name_long": "Moderation",
+          "avatar_uri": "https://static.example.org/avatar/2034689223-256.png"
+        }
+      },
+      {
+        "domain": {
+          "id": 32,
+          "name": "www.xn--mngelmelder-l8a.de",
+          "links": {
+            "self": {
+              "href": "/api/v1/domain/32"
+            }
+          },
+          "title": "Mängelmelder.de"
+        },
+        "links": {
+          "self": {
+            "href": "/api/v1/domain/32/type/69"
+          },
+          "responsible": {
+            "href": "/api/v1/domain/32/user/38155"
+          },
+          "domain": {
+            "href": "/api/v1/domain/32"
+          }
+        },
+        "photo": "optional",
+        "description": "",
+        "has_title": 0,
+        "position": "required",
+        "marker_class": "bms-square-created-226",
+        "private": 0,
+        "name": "Straßenschilder",
+        "markerid": 226,
+        "group": null,
+        "ordering": 1,
+        "bms": {
+          "icon_set": "square",
+          "links": {
+            "self": {
+              "href": "/api/v1/domain/32/bms"
+            },
+            "web": {
+              "href": "https://www.xn--mngelmelder-l8a.de/bms"
+            },
+            "web_message_create": {
+              "href": "https://www.xn--mngelmelder-l8a.de/bms/create"
+            }
+          },
+          "use_groups": 0,
+          "id": 32,
+          "name": "Mängelmelder.de"
+        },
+        "responsible": {
+          "links": {
+            "self": {
+              "href": "/api/v1/domain/32/user/38155"
+            }
+          },
+          "public_name": "Moderation",
+          "internal_name_long": "Moderation",
+          "id": 38155,
+          "avatar_uri": "https://static.example.org/avatar/2034689223-256.png"
+        },
+        "attributes": [
+          {
+            "regex": null,
+            "error": "Fehlermeldung",
+            "help": "Die Angabe Ihres Vornamens ist freiwillig.",
+            "cached": 1,
+            "required_for_user": false,
+            "visible_if_value": null,
+            "type": "text",
+            "required_if_value": null,
+            "code": "first_name",
+            "visible_if_code": null,
+            "relation_data": {},
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/18"
+              }
+            },
+            "required_if_code": null,
+            "required": 0,
+            "group": null,
+            "ordering": 2,
+            "public": 0,
+            "name": "Vorname",
+            "required_admin": 0,
+            "id": 18,
+            "visible_to": "both",
+            "values": [],
+            "default_value": null,
+            "multiselect": 0
+          },
+          {
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/19"
+              }
+            },
+            "relation_data": {},
+            "required_if_code": null,
+            "required": 0,
+            "code": "last_name",
+            "visible_if_code": null,
+            "help": "Die Angabe Ihres Nachnamens ist freiwillig.",
+            "required_for_user": false,
+            "visible_if_value": null,
+            "type": "text",
+            "cached": 1,
+            "required_if_value": null,
+            "regex": null,
+            "error": "Fehlermeldung",
+            "default_value": null,
+            "multiselect": 0,
+            "id": 19,
+            "visible_to": "both",
+            "values": [],
+            "required_admin": 0,
+            "group": null,
+            "ordering": 3,
+            "public": 0,
+            "name": "Nachname"
+          },
+          {
+            "id": 20,
+            "visible_to": "both",
+            "values": [],
+            "default_value": "",
+            "multiselect": 0,
+            "group": "",
+            "ordering": 4,
+            "public": 0,
+            "name": "E-Mail-Adresse",
+            "required_admin": 0,
+            "code": "email",
+            "visible_if_code": null,
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/20"
+              }
+            },
+            "relation_data": {},
+            "required_if_code": null,
+            "required": 1,
+            "regex": "^.+\\@.+$",
+            "error": "Bitte geben Sie Ihre E-Mail Adresse an.",
+            "help": "Die Eingabe der E-Mail-Adresse ist Pflicht.",
+            "visible_if_value": null,
+            "required_for_user": true,
+            "cached": 1,
+            "type": "text",
+            "required_if_value": null
+          }
+        ],
+        "id": 69
+      },
+      {
+        "bms": {
+          "name": "Mängelmelder.de",
+          "use_groups": 0,
+          "id": 32,
+          "icon_set": "square",
+          "links": {
+            "web": {
+              "href": "https://www.xn--mngelmelder-l8a.de/bms"
+            },
+            "self": {
+              "href": "/api/v1/domain/32/bms"
+            },
+            "web_message_create": {
+              "href": "https://www.xn--mngelmelder-l8a.de/bms/create"
+            }
+          }
+        },
+        "responsible": {
+          "links": {
+            "self": {
+              "href": "/api/v1/domain/32/user/38155"
+            }
+          },
+          "public_name": "Moderation",
+          "id": 38155,
+          "internal_name_long": "Moderation",
+          "avatar_uri": "https://static.example.org/avatar/2034689223-256.png"
+        },
+        "id": 65,
+        "attributes": [
+          {
+            "name": "Vorname",
+            "public": 0,
+            "group": null,
+            "ordering": 2,
+            "required_admin": 0,
+            "values": [],
+            "id": 18,
+            "visible_to": "both",
+            "multiselect": 0,
+            "default_value": null,
+            "error": "Fehlermeldung",
+            "regex": null,
+            "required_if_value": null,
+            "help": "Die Angabe Ihres Vornamens ist freiwillig.",
+            "cached": 1,
+            "required_for_user": false,
+            "type": "text",
+            "visible_if_value": null,
+            "code": "first_name",
+            "visible_if_code": null,
+            "required": 0,
+            "relation_data": {},
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/18"
+              }
+            },
+            "required_if_code": null
+          },
+          {
+            "regex": null,
+            "error": "Fehlermeldung",
+            "required_for_user": false,
+            "type": "text",
+            "cached": 1,
+            "visible_if_value": null,
+            "help": "Die Angabe Ihres Nachnamens ist freiwillig.",
+            "required_if_value": null,
+            "code": "last_name",
+            "visible_if_code": null,
+            "required_if_code": null,
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/19"
+              }
+            },
+            "relation_data": {},
+            "required": 0,
+            "ordering": 3,
+            "group": null,
+            "public": 0,
+            "name": "Nachname",
+            "required_admin": 0,
+            "visible_to": "both",
+            "id": 19,
+            "values": [],
+            "default_value": null,
+            "multiselect": 0
+          },
+          {
+            "required_if_value": null,
+            "help": "Die Eingabe der E-Mail-Adresse ist Pflicht.",
+            "visible_if_value": null,
+            "cached": 1,
+            "required_for_user": true,
+            "type": "text",
+            "error": "Bitte geben Sie Ihre E-Mail Adresse an.",
+            "regex": "^.+\\@.+$",
+            "required": 1,
+            "links": {
+              "self": {
+                "href": "/api/v1/domain/32/attribute/20"
+              }
+            },
+            "relation_data": {},
+            "required_if_code": null,
+            "visible_if_code": null,
+            "code": "email",
+            "required_admin": 0,
+            "name": "E-Mail-Adresse",
+            "public": 0,
+            "group": "",
+            "ordering": 4,
+            "multiselect": 0,
+            "default_value": "",
+            "values": [],
+            "id": 20,
+            "visible_to": "both"
+          }
+        ],
+        "has_title": 0,
+        "private": 0,
+        "marker_class": "bms-square-created-200",
+        "position": "required",
+        "name": "Straßenschäden",
+        "markerid": 200,
+        "group": null,
+        "ordering": 1,
+        "links": {
+          "self": {
+            "href": "/api/v1/domain/32/type/65"
+          },
+          "responsible": {
+            "href": "/api/v1/domain/32/user/38155"
+          },
+          "domain": {
+            "href": "/api/v1/domain/32"
+          }
+        },
+        "photo": "optional",
+        "description": "",
+        "domain": {
+          "id": 32,
+          "name": "www.xn--mngelmelder-l8a.de",
+          "links": {
+            "self": {
+              "href": "/api/v1/domain/32"
+            }
+          },
+          "title": "Mängelmelder.de"
+        }
+      }
+    ],
+    "default_domain": {
+      "icon_set": "square",
+      "links": {
+        "web_message_create": {
+          "href": "https://www.xn--mngelmelder-l8a.de/bms/create"
+        },
+        "web": {
+          "href": "https://www.xn--mngelmelder-l8a.de/bms"
+        },
+        "self": {
+          "href": "/api/v1/domain/32/bms"
+        }
+      },
+      "name": "Mängelmelder.de",
+      "use_groups": 0,
+      "id": 32,
+      "settings": {}
+    },
+    "is_default": 1
+  }
+}

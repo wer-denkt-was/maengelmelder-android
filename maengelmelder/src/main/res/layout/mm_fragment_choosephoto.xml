@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mmcolor_step_clicked_bg">
+
+    <com.jsibbold.zoomage.ZoomageView
+        android:id="@+id/image"
+        android:accessibilityLiveRegion="polite"
+        android:contentDescription="@string/acc_cd_fotostep_selected"
+        android:layout_margin="5dp"
+        android:layout_above="@id/imagescrolllayout"
+        app:zoomage_restrictBounds="false"
+        app:zoomage_autoResetMode="UNDER"
+        app:zoomage_animateOnReset="true"
+        app:zoomage_zoomable="true"
+        app:zoomage_minScale="0.6"
+        app:zoomage_maxScale="5"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ProgressBar
+        android:id="@android:id/secondaryProgress"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/btn_remove_img"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@string/acc_cd_fotostep_deleteselected"
+        android:padding="15dp"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tint="@color/darker_red" />
+
+    <TextView
+        android:id="@+id/txt_no_image"
+        android:padding="25dp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:text="@string/status_no_photo_added"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/add_new_image"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        android:src="@drawable/ic_new_image"
+        android:layout_height="100dp"
+        android:contentDescription="@string/acc_cd_fotostep_newimage" />
+
+    <HorizontalScrollView
+        android:id="@+id/imagescrolllayout"
+        android:layout_toEndOf="@id/add_new_image"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:accessibilityLiveRegion="polite"
+            android:gravity="center_vertical"
+            android:id="@+id/imagesscroll"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp">
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</RelativeLayout>

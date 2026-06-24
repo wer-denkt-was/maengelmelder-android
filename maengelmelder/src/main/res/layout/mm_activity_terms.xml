@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/mmcolor_default_bg">
+
+    <RelativeLayout
+        android:id="@+id/termsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/terms_navi"
+            android:accessibilityTraversalAfter="@id/webview"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/reject"
+                android:text="@string/terms_reject"
+                android:contentDescription="@string/acc_cd_btn_terms_beenden"
+                android:theme="@style/MMTheme.GeneralImageButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/accept"
+                android:theme="@style/MMTheme.GeneralImageButton"
+                android:contentDescription="@string/terms_accept"
+                android:text="@string/terms_accept"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                tools:ignore="ButtonStyle" />
+
+        </LinearLayout>
+        
+        <TextView
+            android:id="@+id/web_back"
+            android:visibility="gone"
+            android:padding="5dp"
+            android:text="@string/back"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:drawableLeftCompat="@drawable/ic_arrow_left" />
+
+        <de.maengelmelder.mainmodule.customviews.CustomWebView
+            android:layout_above="@id/terms_navi"
+            android:layout_below="@id/web_back"
+            android:id="@+id/webview_for_welcometext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <de.maengelmelder.mainmodule.customviews.CustomWebView
+            android:layout_above="@id/terms_navi"
+            android:layout_below="@id/web_back"
+            android:visibility="gone"
+            android:id="@+id/webview_for_terms"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <de.maengelmelder.mainmodule.customviews.CustomWebView
+            android:layout_above="@id/terms_navi"
+            android:layout_below="@id/web_back"
+            android:visibility="gone"
+            android:id="@+id/webview_for_policy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+    <include android:id="@+id/terms_status" layout="@layout/mm_layout_splashscreen_terms_status" />
+
+</RelativeLayout>

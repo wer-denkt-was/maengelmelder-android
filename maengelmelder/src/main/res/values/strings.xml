@@ -1,0 +1,573 @@
+<resources>
+    <string name="app_name">Mängelmelder</string>
+    <string name="notif_channel_id">maengelmelder_v2</string>
+
+    <string name="title_welcome">Willkommen zu Mängelmelder</string>
+    <string name="title_terms">Nutzungsbedingungen</string>
+    <string name="title_policy">Datenschutzhinweise</string>
+
+    <string name="warn_not_accepting_terms_and_policy">Um die App nutzen zu können, müssen Sie die Nutzungsbedingungen und Datenschutzhinweise akzeptieren.</string>
+
+    <string name="step_choose_location">Position</string>
+    <string name="step_choose_photo">Fotos</string>
+    <string name="step_choose_category">Kategorie</string>
+    <string name="step_edit_prelim">Beobachtung</string>
+    <string name="step_edit_attributes">Beschreibung</string>
+    <string name="step_review">Übersicht</string>
+    <string name="step_check_duplicates">Duplikate</string>
+
+    <!-- Login -->
+    <string name="register">Konto erstellen</string>
+    <string name="login">Einloggen</string>
+    <string name="login2">Anmelden</string>
+    <string name="logout">Ausloggen</string>
+    <string name="hint_username">E-Mail</string>
+    <string name="hint_password">Passwort</string>
+    <string name="loading_domains">Standortinformation wird geladen…</string>
+    <string name="error_parse_login_resp">Fehler beim Server. Bitte versuchen Sie es später nochmal</string>
+    <string name="error_empty_user_pass">E-Mail oder Passwort müssen nicht leer sein</string>
+    <string name="info_autologin_success">Sie sind als %1$s automatisch eingeloggt</string>
+    <string name="info_login_success">Sie sind als %1$s erfolgreich eingeloggt</string>
+    <string name="info_logout_success">Sie sind erfolgreich ausgeloggt</string>
+    <string name="error_wrong_user_pass">Falsches Email / Passwort</string>
+    <string name="status_autologin_user">Als \'%1$s\' einloggen..</string>
+    <string name="login_to">Sie wöllen zu %1$s eingeloggt werden</string>
+    <string name="override_username"></string>
+    <string name="override_domain_login">Anmeldung an %1$s</string>
+    <string name="login_failed_to_retrieve_domain">Kein gültiges Position gefunden. Bitte prüfen Sie Ihre Internetverbindung oder GPS.</string>
+    <string name="mm_no_location_fallback_message"></string>
+    <string name="warn_previous_account_auto_logout">Sie sind aktuell an %1$s angemeldet. Mit der neuen Anmeldung auf %2$s werden Sie automatisch vom bisherigen System abgemeldet.</string>
+
+    <!-- Map download -->
+    <string name="download_cache_tile">Karte laden</string>
+    <string name="toggle_map_list">Karteliste</string>
+    <string name="hint_map_name">Kartename</string>
+    <string name="help">Hilfe</string>
+    <string name="map_confirm_text">Die Teil der Karte, die Sie eingesetzt haben, wird zu Ihrem Gerät geladen. Bitte geben Sie die Name der Kartedatei</string>
+    <string name="overwrite_alert_title">Kartedatei vorliegt</string>
+    <string name="overwrite_alert_msg">Es gibt die Kartedaten mit der gleichen Name\n\n(%1$s).\n\nMöchten Sie die alte Karte überschreiben?</string>
+    <string name="overwrite_yes">Ja</string>
+    <string name="overwrite_no">Nein</string>
+    <string name="notif_info_download_map_01">Karte wird vorbereitet&#8230;</string>
+    <string name="err_mapname_empty">Bitte geben Sie die Name der Kartedatei</string>
+    <string name="toggle_mapoffline">Offline-Karte nutzen\n(%1$d Kartedatei)</string>
+    <string name="info_no_mapfiles">Keine Kartedatei</string>
+    <string name="warn_mapdownload_may_fail">Bitte beachten Sie, das der Download-Prozess wegen der Größe der Karte oder der verfügbarkeit des Servers erfolglos sein kann</string>
+
+    <!-- Activities -->
+    <string name="activity_mymessages">Meine Meldungen</string>
+    <string name="activity_messagedetail">Meldung</string>
+    <string name="activity_update_message">Meldung aktualisieren</string>
+    <string name="activity_new_message">Neue Meldung</string>
+    <string name="activity_new_message_idea">Neue Idee</string>
+    <string name="save">Speichern</string>
+    <string name="dialog_loading">Geladen…</string>
+    <string name="dialog_loading_checkcategory">Position validieren…</string>
+
+    <!-- Idea or Defect report activity picker -->
+    <string name="pick_defectreport">Mängel melden</string>
+    <string name="pick_idea">Idee anlegen</string>
+
+    <!-- Deeplink -->
+    <string name="deeplink_loading_message">Neue Meldung wird vorbereitet…</string>
+    <string name="deeplink_err_type_not_found">Die gegebene Kategorie ist auf diesem Standort nicht gültig.</string>
+
+    <!--Overview-->
+    <string name="message_create_option_qr_code_desc">Scannen Sie eine QR-Code, um neue Meldung mit vorausgefüllte Information zu erstellen.</string>
+    <string name="message_create_option_qr_code_title">QR-Code</string>
+    <string name="message_create_option_standard_desc">Setzen Sie den Standort, Wählen Sie eine Kategorie, und füllen Sie zusätzliche Information aus.</string>
+    <string name="message_create_option_standard_title">Standard</string>
+    <string name="back_twice_to_exit">Drücken Sie erneut, um die App zu verlassen</string>
+    <string name="err_no_conn">Es gibt keine Internetverbindung. Bitte versuchen Sie es später erneut</string>
+    <string name="err_general">Fehlercode %1$s. Bitte versuchen Sie nochmal später</string>
+    <string name="err_not_found">404 Nicht gefunden. Bitte versuchen Sie es später erneut</string>
+    <string name="err_auth">Authentifizierung fehlgsechlagen. Bitte versuchen Sie es später erneut</string>
+    <string name="err_server_error">Es gibt keine Antworten vom Server. Bitte versuchen Sie es später erneut</string>
+    <string name="err_server_500">Es ist leider ein technisches Problem aufgetreten. Bitte versuchen Sie es später erneut.</string>
+    <string name="err_server_503">Server ist momentan nicht verfügbar. Bitte versuchen Sie es später erneut</string>
+    <string name="err_server_no_respond">Es gibt keine Antworten vom Server. Bitte versuchen Sie es später erneut</string>
+    <string name="err_server_cert">Es gibt Zertifikatsproblem vom Server. Bitte versuchen Sie es später erneut</string>
+    <string name="status_loading_messages">Meldungen werden geladen..</string>
+    <string name="btn_new_message">Neue Meldung</string>
+    <string name="btn_new_message_from_qr">QR-Code scannen</string>
+    <string name="selected_message_group_line1">%1$s Meldungen</string>
+    <string name="selected_message_group_line2">Tippen Sie, um eine Liste zu öffnen</string>
+    <string name="loading_retrieving_location">Standort wird abgerufen…</string>
+    <string name="warn_position_not_found_title">Ihr aktueller Standort konnte nicht ermittelt werden.</string>
+    <string name="warn_position_not_found_desc">Sie können die Position auf der Karte manuell auswählen oder Ihren aktuellen Standorts erneut abfragen.</string>
+    <string name="warn_position_not_found_btn_no">Standort erneut ermitteln</string>
+    <string name="warn_position_not_found_btn_yes">Position auf Karte wählen</string>
+    <string name="warn_firsttime_not_emergency_app">Benutzen Sie dieses System niemals, um Notfälle zu melden. Verwenden Sie hierzu die Telefonnummern von Polizei, Feuerwehr und Rettungsdienst.</string>
+
+    <!--Profile-->
+    <string name="activity_profile">Ihr Profil</string>
+    <string name="profile_name">Name</string>
+    <string name="profile_email">Email</string>
+
+    <!--Message creation-->
+    <string name="menu_save">Zwischenspeichern</string>
+    <string name="menu_cancel">Abbrechen</string>
+    <string name="info_message_saved">Ihre Meldung wird erfolgreich gespeichert.</string>
+    <string name="info_message_cancelled">Ihre Meldung wird erfolgreich gelöscht.</string>
+    <string name="err_msgcreation_invalid_json">Es fehlen noch Angaben oder der Beschreibungstext ist zu kurz. Die Meldung kann nicht gesendet werden. Bitte prüfen Sie Ihre Angabe.</string>
+    <string name="err_msgcreation_invalid_type">Sie haben keine Kategorie eingegeben. Die Meldung kann nicht gesendet werden. Bitte prüfen Sie Ihre Angabe.</string>
+    <string name="err_msgcreation_invalid_pos">Sie haben keine gültige Position eingegeben. Die Meldung kann nicht gesendet werden. Bitte prüfen Sie Ihre Angabe</string>
+    <string name="err_msgcreation_invalid_attr">Es fehlen noch Angaben. Die Meldung kann nicht gesendet werden. Bitte prüfen Sie Ihre Angabe</string>
+    <!-- TODO need to be changed -->
+    <string name="err_msgcreation_need_auth">Die Meldung kann nicht gesendet werden. Für diese Meldung müssen Sie erst angemeldet.</string>
+    <string name="msg_creation_connection_not_available">Sie haben keine Internetverbindung und können die App daher nur eingeschränkt nutzen.</string>
+
+    <!--Photo wählen-->
+    <string name="camera">Kamera</string>
+    <string name="gallery">Galerie</string>
+    <string name="select_photo">Bild wählen</string>
+    <string name="warn_no_photo_chosen_title">Achtung: Kein Photo</string>
+    <string name="warn_no_photo_chosen">Wenn Sie kein Foto hochladen ist es wichtig, dass Sie den Mangel ausführlich beschreiben! Mit einem Foto ist es ebenfalls leichter den Mangel zu beheben.
+        Sie können das Foto auch nachträglich hinzufügen.</string>
+    <string name="warn_no_photo_chosen_positive">Ja</string>
+    <string name="warn_no_photo_chosen_negative">Photo machen</string>
+    <string name="status_no_photo_added">Kein Foto hinzugefügt. Klicken Sie hier, um ein neues Foto über die Kamera oder aus der Galerie hinzuzufügen.</string>
+    <string name="photo_step_onetime_info"></string>
+
+    <!--Standort wählen-->
+    <string name="view_street">Karte</string>
+    <string name="view_satellite">Satellite</string>
+    <string name="position_set">Position bestätigen</string>
+    <string name="position_instructions">Bitte prüfen Sie, ob die Position des Anliegens von der automatisch gemessenen abweicht. Falls ja, bewegen Sie die Karte bitte so, dass das Fadenkreuz die tatsächliche Position des Anliegens anzeigt.</string>
+    <string name="dialog_outsidearea_yes">Position auswählen</string>
+    <string name="warn_position_not_needed">Für die ausgewählte Kategorie wird keine Position benötigt.</string>
+    <string name="edittext_search_address_hint">nach Adresse suchen…</string>
+    <string name="search_address_btn_text">Ort suchen</string>
+    <string name="search_address_loading">suche nach Adresse…</string>
+    <string name="search_address_fail">Adresse nicht gefunden. Bitte geben Sie andere Adresse.</string>
+
+    <!-- Category wählen -->
+    <string name="catinfo_title">Info zu der Kategorie</string>
+    <string name="step_category_info"></string>
+    <string name="catinfo_no_desc">Keine Beschreibung</string>
+    <string name="warn_domain_not_allowed">Dieses Anliegen befindet sich außerhalb der erlaubten Area. Bitte wählen Sie eine andere Position.</string>
+    <string name="warn_no_category">An dieser Stelle ist keine Zuständigkeit hinterlegt, keine Meldung möglich</string>
+    <string name="warn_no_location">Bitte wählen Sie zuerst eine Standort für die Meldung im Schritt \"Position\"</string>
+    <string name="warn_no_category_found">Keine Kategorie gefunden</string>
+    <string name="info_num_duplicates">Es gibt %1$d mögliche Duplikate für diese Kategorie</string>
+    <string name="btn_ignore_dup">Ignorieren</string>
+    <string name="cat_dialog_confirm">Verstanden</string>
+    <string name="loading_finding_dup">Es wird nach Duplikaten gesucht&#8230;</string>
+    <string name="dialog_ext_category_content">Meldungen für die Kategorie \"%1$s\" werden mit dieser App nicht entgegen genommen. Sie werden für das Thema auf eine externe Seite \"%2$s\" weiter geleitet. Möchten Sie fortfahren?</string>
+    <string name="warn_duplicate_found"></string>
+    <string name="form_category_rubrik_title">Bitte wählen Sie einen Rubrik</string>
+    <string name="form_category_rubrikinfo_title">Rubrik: %1$s</string>
+    <string name="form_category_btn_back_to_rubric">Rubrik auswählen</string>
+    <string name="category_search_hint">Suche</string>
+    <string name="err_category_search_failed">Fehler beim Suchen. Bitte probieren Sie weiter nochmal.</string>
+    <string name="category_selected_only_anonym_post">Die Meldung an %1$s wird ohne angemeldetes Nutzerkonto erstellt.</string>
+    <string name="category_selected_no_posting_without_login">Um eine Meldung in dieser Kategorie zu erstellen, melden Sie sich bitte bei %1$s an.</string>
+
+    <!-- Form ausfüllen -->
+    <string name="default_msg_title"></string>
+    <string name="default_msg_description"></string>
+    <string name="edit_form_desc">Bitte beschreiben Sie Ihr Anliegen, damit es zusammen mit dem Foto sinnvoll bearbeitet werden kann.\nDie Beschreibung Ihres Anliegens ist öffentlich einsehbar. Bitte tragen Sie in dieses Feld keine personenbezogenen Daten wie z.B. einen Namen oder eine E-Mailadresse etc. ein.</string>
+    <string name="hint_title">Titel</string>
+    <string name="hint_desc">Kurze Beschreibung Ihres Anliegens</string>
+    <string name="spinner_default_choice">&lt;Bitte wählen&gt;</string>
+    <string name="warn_choose_category">Bitte wählen Sie erst die Kategorie, bevor Sie die Beschreibung ausfüllen</string>
+    <string name="warn_form_incomplete_title">Achtung</string>
+    <string name="warn_form_incomplete_content">Es gibt einige verpflichtende Felder, die nicht ausgefüllt werden</string>
+    <string name="warn_form_incomplete_positive">Später ausfüllen</string>
+    <string name="warn_form_incomplete_negative">Überprüfen</string>
+    <string name="warn_desc_empty">Beschreibung sollte nicht leer sein.</string>
+    <string name="form_attr_multiselect_btn">Auswählen</string>
+
+    <!-- Meine Meldungen -->
+    <string name="info_my_messages">Hier finden Sie Ihre gespeicherten Meldungen, die Sie noch nicht hochgeladen haben.</string>
+    <string name="info_incomplete_message_list_head">Noch nicht hochgeladen</string>
+    <string name="info_uploaded_message_list_head">Hochgeladen</string>
+    <string name="info_no_saved_messages">Keine gespeicherte Meldungen</string>
+    <string name="loading_message_update">Meldungen werden aktualisiert…</string>
+    <string name="menu_update_statuses">Status der Meldungen aktualisieren</string>
+    <string name="activity_idea">Idee</string>
+    <string name="error_user_cannot_be_authenticated">Um eine Meldung in dieser Kategorie zu erstellen, melden Sie sich bei %1$s an.</string>
+
+    <!-- Logs -->
+    <string name="info_no_logs">Keine Aktivitäten</string>
+    <string name="loginfo_login">Nutzer %1$s hat eingeloggt</string>
+    <string name="loginfo_logout">Nutzer %1$s hat ausgeloggt</string>
+    <string name="loginfo_new_message">Neue Meldung (ID: %1$s) wird erstellt</string>
+    <string name="loginfo_remove_message">Die Meldung %1$s (ID: %2$s) wird entfernt</string>
+    <string name="loginfo_edit_message">Die Meldung %1$s (ID: %2$s) wird bearbeitet</string>
+    <string name="loginfo_update_message">Die Meldung %1$s (ID: %2$s) wird aktualisiert</string>
+    <string name="loginfo_update_message_failed">Fehler bei der Aktualisierung der Meldung %1$s (ID: %2$s). Grund: %3$s</string>
+    <string name="loginfo_message_upload">Die Meldung %1$s (ID: %2$s) wird hochgeladen</string>
+    <string name="loginfo_message_upload_success">Die Meldung %1$s (ID: %2$s) wird erfolgreich hochgeladen. Der neue ID beträgt %3$s</string>
+    <string name="loginfo_message_upload_failed">Fehler bei der Hochladung ihre Meldung %1$s (ID: %2$s). Grund: %3$s</string>
+    <string name="loginfo_image_upload">Das Bild %1$s wird für die Meldung %2$s (ID: %3$s) hochgeladen</string>
+    <string name="loginfo_image_upload_success">Das Bild %1$s wird für die Meldung %2$s (ID: %3$s) erfolgreich hochgeladen</string>
+    <string name="loginfo_image_upload_fail">Fehler bei der Hochladung des Bilds %1$s für die Meldung %2$s (ID: %3$s). Grund: %4$s </string>
+    <string name="loginfo_msg_viewed">Sie haben die Meldung %1$s (ID: %2$s) angeschaut</string>
+    <string name="menu_remove_logs">Alle Historie entfernen</string>
+
+    <!-- Messages list -->
+    <string name="activity_messages_list">Alle Meldungen</string>
+    <string name="info_no_messages">Keine Meldungen</string>
+    <string name="filter">Filtern nach..</string>
+    <string name="btn_filter">Filtern</string>
+    <string name="btn_reset">Zurücksetzen</string>
+    <string name="filter_status">Status</string>
+    <string name="filter_name">Titel / Beschreibung</string>
+    <string name="filter_category">Kategorie</string>
+    <string name="filter_fav_only">Nur Favoriten</string>
+    <string name="filter_info_desc">Nach Beschreibung mit Schlusselwort \'%1$s\' filtern</string>
+    <string name="filter_info_cat">Nach Kategorie mit Schlusselwort \'%1$s\' filtern</string>
+    <string name="filter_info_status">Nach \'%1$s\' filtern</string>
+    <string name="menu_detail">Detail anschauen</string>
+    <string name="menu_fav">Als Favorite markieren / entfernen</string>
+    <string name="menu_findonmap">Auf der Karte finden</string>
+    <string name="menu_sort_name">Nach Name sortieren</string>
+    <string name="menu_sort_category">Nach Kategorie sortieren</string>
+    <string name="menu_sort_status">Nach Status sortieren</string>
+    <string name="filter_chk_domain_only">Nur Meldungen aus &lt;b&gt;%1$s&lt;/b&gt;</string>
+    <plurals name="msgs_found">
+        <item quantity="one">%d Meldung gefunden</item>
+        <item quantity="other">%d Meldungen gefunden</item>
+    </plurals>
+
+    <!-- Menu -->
+    <string name="menu_startpage">Start</string>
+    <string name="menu_test_info">Info zur Testumgebung</string>
+    <string name="menu_mymessages">Meine Meldungen</string>
+    <string name="menu_myideas">Meine Ideen</string>
+    <string name="menu_welcome">Willkommen</string>
+    <string name="menu_about">Über diese App</string>
+    <string name="menu_datenschutz">Datenschutzerklärung</string>
+    <string name="menu_help">Nutzungsbedingungen</string>
+    <string name="menu_impressum">Impressum</string>
+    <string name="menu_settings">Einstellungen</string>
+    <string name="menu_logs">Meine Aktivitäten</string>
+    <string name="menu_new_message">Neue Meldung</string>
+    <string name="menu_new_message_qr">Neue Meldung aus QR-Code</string>
+
+    <!-- Testinfo -->
+    <string name="activity_testinfo">Testumgebung</string>
+    <string name="title_testinfo_appversion">App Version</string>
+    <string name="title_testinfo_packagename">Packagename</string>
+    <string name="title_testinfo_device">Gerät</string>
+    <string name="title_testinfo_endpoint">Server</string>
+    <string name="title_testinfo_connection">Netz</string>
+    <string name="title_testinfo_mapfiles">Karte-Ordner</string>
+    <string name="title_testinfo_loggedinuser">Eingeloggte</string>
+    <string name="title_testinfo_token">Auth.token</string>
+    <string name="text_conn">Typ: %1$s %2$s\nStatus: %3$s</string>
+    <string name="text_no_conn">Keine Verbindung</string>
+
+    <!-- Review -->
+    <string name="category">Kategorie</string>
+    <string name="title">Titel</string>
+    <string name="desc">Beschreibung</string>
+    <string name="authority">Behörde</string>
+    <string name="message">Weitere Angaben des Melders</string>
+    <string name="create_message_save_button">Später abschicken</string>
+    <string name="next_button">Weiter</string>
+    <string name="btn_send_msg">Abschicken</string>
+    <string name="save_message">Ihre Meldung wird gespeichert. Sie können die Meldung später im Menü > Meine Meldungen hochladen.</string>
+    <string name="save_idea">Ihre Idee wird gespeichert. Sie können die Idee später im Menü > Meine Idee hochladen.</string>
+    <string name="upload_message_progress">Ihre Meldung wird abgeschickt&#8230;</string>
+    <string name="upload_message_started">Ihre Meldung wird nun hochgeladen und anschließend geprüft.</string>
+    <string name="photo_req_content">Meldungen in der gewählten Kategorie benötigen ein Foto. Ohne Foto kann diese Meldung nicht versendet werden.</string>
+    <string name="err_no_photo">Diese Meldung benötigt ein Foto.</string>
+    <string name="dialog_confirmupload_text">Die Meldung ist bereit zum Hochladen an &lt;b&gt;%1$s&lt;/b&gt;. Sollte dies nicht korrekt sein, prüfen Sie bitte vor dem Hochladen, ob die Position der Meldung korrekt übernommen wurde.</string>
+    <string name="dialog_confirmupload_bigsize">Ihre Meldung ist %1$s MB groß. Das Hochladen kann je nach Verbindung einige Zeit dauern.</string>
+    <string name="dialog_confirmupload_multiimages">Insbesondere mehrere Fotos führen zu einem großen Datenvolumen.</string>
+    <string name="warn_incomplete_msg">Ihre Meldung ist nicht vollständig ausgefüllt. Bitte prüfen Sie Ihre Meldung.</string>
+
+    <!-- Email subscription -->
+    <string name="email">E-mail</string>
+    <string name="email_sub">Abonnieren</string>
+    <string name="email_not_sub">Einfach senden</string>
+    <string name="subscribe_check">Benachrichtigung per Email erhalten</string>
+    <string name="send">Meldung abschicken</string>
+    <string name="email_sub_explain">Ihre Meldung wird zunächst von einem Sachbearbeiter geprüft. Entspricht sie den Nutzungsbedingungen, wird sie freigeschaltet und weitergeleitet. Wenn Sie uns Ihre Email-Adresse hinterlassen, werden wir Sie benachrichtigen, sobald die Meldung bearbeitet wurde.</string>
+    <string name="email_sub_explain_2">Bitte geben Sie Ihre Email-Addresse, um die Abonnierung dieser Meldung zu registrieren</string>
+    <string name="info_message_subscribed">Sie haben die Meldung erfolgreich abonniert.</string>
+    <string name="info_message_already_subs">Sie haben schon die Meldung abonniert.</string>
+    <string name="info_message_cannot_subs">Leider können Sie nicht mehr die Meldung abonnieren.</string>
+    <string name="error_email_invalid">Die Email Adresse ist ungültig. Bitte geben Sie eine gültige Email Adresse ein.</string>
+
+    <!--Notif-->
+    <string name="message_upload_prepare_notif_content">Die Meldung wird jetzt für das Hochladen vorbereitet&#8230;</string>
+    <string name="message_upload_notif_title">Die Meldung wird hochgeladen&#8230;</string>
+    <string name="message_upload_images">Die Bilder werden jetzt hochgeladen&#8230;</string>
+    <string name="notif_image_upload_count">Die Bilder werden hochgeladen.. (%1$s)</string>
+    <string name="notif_image_failed_to_upload">Einige Bilder konnten nicht hochgeladen werden</string>
+    <string name="message_upload_images_fail">Einige Bilder konnten nicht hochgeladen werden&#8230;</string>
+    <string name="message_upload_done_notif_title">Meldung hochgeladen</string>
+    <string name="message_upload_done_notif_content">Die Meldung wurde erfolgreich hochgeladen.</string>
+    <string name="message_upload_fail_notif_title">Meldung könnte nicht hochgeladen werden</string>
+    <string name="message_upload_fail_reason_image">Bilder der Meldung könnte nicht hochgeladen werden weil es zu groß ist. Bitte wählen Sie ein andere Bild.</string>
+    <string name="message_upload_fail_reason_attribute">Fehler auf einige Felder. Bitte prüfen Sie nochmal.</string>
+    <string name="message_upload_fail_reason_parameter">Die Meldung ist nicht komplett</string>
+    <string name="message_upload_fail_timeout">Zeitüberschreitung beim Verbindungsaufbau. Bitte versuchen Sie es später oder mit besserer Verbindung</string>
+    <string name="message_upload_fail_connect">Momentan haben Sie keine Verbindung. Bitte versuchen Sie es später</string>
+    <string name="comment_upload_start_title">Der Kommentar wird hochgeladen&#8230;</string>
+    <string name="comment_upload_completed_title">Der Kommentar wird erfolgreich hochgeladen.</string>
+    <string name="message_upload_category_not_valid">Die ausgewählte Kategorie ist an dieser Position nicht mehr verfügbar. Bitte wählen Sie eine neue Kategorie für Ihre Meldung.</string>
+    <string name="map_dl_start">Die Kartendaten werden sofort geladen und gespeichert. Sie können den Frotschritt die Karteladung auf die Notification sehen</string>
+    <string name="map_dl_notif_title">Karte laden&#8230;</string>
+    <string name="map_dl_notif_estimating">Kartegröße wird abgeschätzt&#8230;</string>
+    <string name="map_dl_notif_downloading">Karte \'%1$s\' wird geladen&#8230;</string>
+    <string name="map_dl_notif_saving">Karte \'%1$s\' wird gespeichert&#8230;</string>
+    <string name="map_dl_notif_error_file">Keine Berechtigung zur Speicherung</string>
+    <string name="map_dl_notif_error_param">Fehler bei dem Karteserver. Versuchen Sie nochmal später</string>
+    <string name="map_dl_notif_error_toobig">Die Kartedatei ist zu groß</string>
+    <string name="map_dl_notif_error_title">Karteladung nicht erfolgreich!</string>
+    <string name="map_dl_notif_success">Karte \'%1$s\' wird erfolgreich gespeichert</string>
+
+    <!-- Responses on updating messages -->
+    <string name="update_msg_success">Meldung wird erfolgreich aktualisiert</string>
+    <string name="update_msg_not_exist">Die Meldung existiert nicht</string>
+    <string name="update_msg_not_allowed">Sie können nicht mehr ein Update für diese Meldung erstellen</string>
+    <string name="update_msg_no_text">Bitte geben Sie den Text</string>
+
+    <!-- Default http error response -->
+    <string name="def_err_404">Fehler(404): Nicht gefunden</string>
+    <string name="def_err_400">Fehler(400): Request nicht gültig</string>
+    <string name="def_err_401">Fehler(401): Kein Erlaubnis für diesen Zugriff</string>
+    <string name="def_err_403">Fehler(403): Vom Server abgelehnt</string>
+    <string name="def_err_408">Fehler(408): Timeout vom Server. Bitte versuchen Sie es nochmal später</string>
+    <string name="def_err_500">Fehler(500): Fehler beim Server. Bitte versuchen Sie es nochmal später</string>
+    <string name="def_err_503">Fehler(503): Server ist momentan nicht verfügbar. Bitte versuchen Sie es nochmal später</string>
+
+    <!-- My Messages -->
+    <string name="status_loading_local_messages">Meldungen werden geladen..</string>
+    <string name="menu_upload">Hochladen</string>
+    <string name="menu_upload_remaining_image">Bildern hochladen</string>
+    <string name="message_uploading">Die Meldung wird hochgeladen..</string>
+    <string name="message_upload_success">Die Meldung wurde erfolgreich hochgeladen</string>
+    <string name="message_imageupload_success">Die Bildern ihrer Meldung wurden erfolgreich hochgeladen</string>
+    <string name="message_upload_failed">Meldung konnte nicht hochgeladen werden</string>
+    <string name="message_already_uploaded">wurde %1$s hochgeladen</string>
+    <string name="menu_edit">Bearbeiten</string>
+    <string name="menu_remove">Entfernen</string>
+    <string name="warn_message_upload_title">Meldung hochladen</string>
+    <string name="warn_message_incomplete">Ihre Meldung ist nicht vollständig ausgefüllt. Bitte prüfen Sie Ihre Meldung. Folgende Angaben fehlen:</string>
+    <string name="warn_message_ready_upload">Ihre Meldung wird jetzt hochgeladen. Die Meldung wird bei &lt;b&gt;%1$s&lt;/b&gt; erhalten</string>
+    <string name="missing_photo">Foto</string>
+    <string name="missing_category">Kategorie</string>
+    <string name="missing_attribute">Beschreibung und weitere Angaben</string>
+    <string name="missing_location">Position</string>
+    <string name="dialog_cancel">Abbrechen</string>
+    <string name="dialog_loc_perm">Berechtigung</string>
+    <string name="dialog_upload">Hochladen</string>
+    <string name="dialog_edit">Bearbeiten</string>
+    <string name="dialog_ok">Ja</string>
+    <string name="dialog_ok2">OK</string>
+    <string name="ok">OK</string>
+    <string name="dialog_exit">Beenden</string>
+    <string name="more_image_indicator">+ %1$s</string>
+
+    <!-- Message detail -->
+    <string name="add_comment">Kommentar hinzufügen</string>
+    <string name="message_num">Meldung #%1$s</string>
+    <string name="idea_num">Idee #%1$s</string>
+    <string name="err_msgdetail_fetch_aborted">Fehler beim Server. Bitte versuchen Sie es nochmal später</string>
+    <string name="err_msgdetail_notfound">Die Meldung wurde nicht gefunden</string>
+    <string name="err_msgdetail_noperm">Sie haben keine Erlaubnis, die Meldung anzuschauen</string>
+    <string name="p_detail_desc">Anfrage</string>
+    <string name="p_detail_type">Typ</string>
+    <string name="p_detail_status">Status</string>
+    <string name="p_detail_date">Datum</string>
+    <string name="p_detail_addr">Adresse</string>
+    <string name="p_detail_history">Historie</string>
+    <string name="p_detail_history_date">Update am %1$s</string>
+    <string name="p_detail_history_datetime">am %1$s um %2$s</string>
+
+    <!-- Update message -->
+    <string name="your_comment">Ihr Kommentar</string>
+    <string name="problem_solved">Wurde der Mangel bereits behoben?</string>
+    <string name="new_image">Neues Bild</string>
+    <string name="old_image">Altes Bild</string>
+    <string name="update_message_send_button">Kommentar abschicken</string>
+    <string name="err_message_empty">Kommentar ist leer</string>
+    <string name="err_message_not_exists">Meldung existiert nicht mehr</string>
+    <string name="err_message_comment_disabled">Kommentare sind für diese Meldung deaktiviert</string>
+    <string name="alertdialog_title_choose_photo">Photo wählen</string>
+    <string name="info_not_allowed_to_update">Sie durften nicht diese Meldung aktualisieren</string>
+    <string name="info_messsage_uploading">Ihr Kommentar wird hochgeladen&#8230;</string>
+    <string name="info_success_update_message">Vielen Dank für Ihren Hinweis. Der öffentliche Kommentar wird an den aktuell Zuständigen der Meldung geschickt. Erst nach einer manuellen Prüfung ist er öffentlich im System sichtbar.</string>
+    <string name="info_success_update_message_short">Vielen Dank. Der Zuständige wird über Ihren Kommentar informiert.</string>
+    <string name="activity_idea_comment">Idee kommentieren</string>
+
+    <!-- Map display on offline file -->
+    <string name="activity_offlinemapdisplay">Übersichtkarte</string>
+    <string name="chk_offlinetoggle">Offline-Karte</string>
+    <string name="name">Name</string>
+    <string name="file_location">Gespeichert um</string>
+    <string name="file_size">Größe</string>
+    <string name="extent">Umfang</string>
+    <string name="map_enabled_when_offline">Aktiv auf keine Verbindung</string>
+    <string name="info_map_deleted">Karte \'%1$s\' wird erfolgreich entfernt</string>
+
+    <!-- Offline map caching tutorial -->
+    <string name="tut_01_title">Geht Offline!</string>
+    <string name="tut_01_content">Sie können jetzt eine Karte speichern und später zeigen, wenn Sie Offline sind</string>
+    <string name="tut_02_title">Wählen Ihre Area</string>
+    <string name="tut_02_content">Setzen Sie die Area Ihrer Karte, die Sie speichern möchte. Wenn Sie fertig sind, drücken Sie \"Karte laden\"</string>
+    <string name="tut_03_title">Kartename</string>
+    <string name="tut_03_content">Geben Sie die Name Ihrer Kartedatei. Danach wird der Download-Prozess gestartet</string>
+    <string name="tut_04_title">Ladung verfolgen</string>
+    <string name="tut_04_content">Durch Ihre Notification können Sie den Download-Prozess verfolgen. Gelbes Icon meintet, dass der Prozess gelaufen wird</string>
+    <string name="tut_05_title">Erfolgreich</string>
+    <string name="tut_05_content">Wenn das Icon grun ist, ist der Prozess erfolgreich gegangen. Ihre Kartedatei wird auf Ihrem Speicherplatz gespeichert</string>
+    <string name="tut_06_title">Ihre Kartedatei zeigen</string>
+    <string name="tut_06_content">Auf dem Übersichtkarte können Sie Ihre Karte anzeigen durch der Linken Menü</string>
+    <string name="tut_07_title">Hinweis zum Karteladung</string>
+    <string name="tut_07_content">Bitte nutzen Sie WiFi, wenn Sie eine Karte laden. Die Große der Karte kann bis hundert der MBs sein, von die Große der Teil der Karte abhängig sein</string>
+    <string name="skiptutorial">Los geht</string>
+
+    <!--Terms-->
+    <string name="activity_terms">Nutzungsbedingungen und Datenschutz</string>
+    <string name="terms_accept">Akzeptieren</string>
+    <string name="terms_reject">Beenden</string>
+    <string name="back">Zurück</string>
+
+    <!--Others-->
+    <string name="seconds_ago">vor %1$d Sekunden</string>
+    <string name="minute_ago">vor %1$d Minuten</string>
+    <string name="one_minute_ago">vor 1 Minute</string>
+    <string name="one_hour_ago">vor 1 Stunde</string>
+    <string name="hour_ago">vor %1$d Stunden</string>
+    <string name="one_day_ago">vor 1 Tag vor</string>
+    <string name="day_ago">vor %1$d Tage vor</string>
+    <string name="one_week_ago">vor 1 Woche</string>
+    <string name="week_ago">vor %1$d Wochen</string>
+    <string name="one_month_ago">vor 1 Monat</string>
+    <string name="month_ago">vor %1$d Monate</string>
+    <string name="one_year_ago">vor 1 Jahr</string>
+    <string name="year_ago">vor %1$d Jahre</string>
+    <string name="others">Sonstiges</string>
+    <string name="other_domain">anderen Domain</string>
+
+    <!-- Settings -->
+    <string name="settings">Einstellungen</string>
+    <string name="next">Weiter</string>
+
+    <!-- QR Code activity for message creation -->
+    <string name="err_qrscan_exception">Der QR-Code Scanner konnte nicht geöffnet werden. Systemfehler: %1$s</string>
+    <string name="err_qrscan_invalid_url">Der QR-Code enthält ungültige Informationen. Bitte prüfen Sie, ob Sie den richtigen QR-Code verwendet haben.</string>
+    <string name="err_qrscan_invalid_location">Die QR-Code erhält ungültigen Standort. Bitte prüfen Sie, ob Sie den richtigen QR-Code verwendet haben.</string>
+    <string name="err_qrscan_invalid_category">Die QR-Code erhält ungültige Kategorie. Bitte prüfen Sie, ob Sie den richtigen QR-Code verwendet haben.</string>
+    <string name="err_qrscan_bad_conn">Leider können wir die QR-Code wegen fehlender Internetverbindung nicht prüfen. Sie haben überhaupt die Möglichkeit, neue leere Meldung zu erstellen.</string>
+    <string name="qr_scan_check_params">QR-Code wird geprüft…</string>
+    <string name="dialog_continue_create_message">Neue Meldung überhaupt erstellen</string>
+
+    <!-- Permissions -->
+    <string name="dialog_permission_title">App-Berichtigungen</string>
+    <string name="dialog_permission_headline">Bitte erlauben Sie uns die folgenden Zugriffe, um alle Funktionen der App nutzen zu können:</string>
+    <string name="permission_location">Erkennung Ihres aktuellen Standorts. So kann die Position einer neuen Meldung automatisch ermittelt werden und es können Ihnen weitere Meldungen in Ihrem direkten Umfeld angezeigt werden.</string>
+    <string name="permission_camera">Zugriff auf Kamera. Dies ermöglicht Ihnen, Bilder direkt mit der Kamera aufzunehmen und zu verwenden. Diese Berechtigung kann auch später erteilt werden.</string>
+    <string name="permission_notification">Zugriff auf Benachrichtigung. Dies ermöglicht Benachrichtigungen zum Fortschritt des Meldungs-Uploads. Diese Berechtigung kann auch später erteilt werden.</string>
+    <string name="permission_storage">Zugriff auf Dateien von Ihrem lokalen Speicher. Somit können Sie Ihrer Meldung Bilder hinzufügen.</string>
+    <string name="dialog_permission_ask">Verstanden</string>
+    <string name="dialog_permission_dontshow">Fenster nicht mehr zeigen</string>
+
+    <!--Location update services-->
+    <string name="cancel_location_update">Deaktivieren</string>
+    <string name="layerswitch_name">Kartenlayer</string>
+    <string name="location_update_title">Standorterkennung ist aktiv.</string>
+    <string name="location_update_content">Ihr aktueller Standort wird regelmäßig im Hintergrund abgefragt.</string>
+
+    <!-- General error messages -->
+    <string name="err_terms_not_loaded_no_conn">Es gibt keine Internetverbindung</string>
+    <string name="err_terms_not_loaded_other_err">Fehler beim Server</string>
+    <string name="err_location_not_found">Ihre Position konnte noch nicht bestimmt werden. Bitte warten Sie, bis ihr Telefon ihre Position bestimmt hat oder aktivieren Sie GPS.</string>
+
+    <!-- Alert dialogs -->
+    <string name="dialog_gps_activate">GPS aktivieren</string>
+    <string name="dialog_rate_app_desc">Möchten Sie die App bewerten? Ihre Bewertung hilft uns, die App zu verbessern.</string>
+    <string name="dialog_to_rate_app">Ja, App bewerten</string>
+
+    <!-- Tutorial -->
+    <string name="tut_new_msg_title">Neue Meldung</string>
+    <string name="tut_new_msg_content">Tippen Sie hier, um eine neue Meldung zu erstellen.</string>
+    <string name="tut_optmenu_title">Optionen</string>
+    <string name="tut_optmenu_content">Hier können Sie Ihre gespeicherte Meldungen überprüfen, oder unsere App-Info sehen</string>
+    <string name="tut_home_title">Menü</string>
+    <string name="tut_home_content">Hier können Sie Ihre gespeicherten Meldungen ansehen und hochladen, sowie Informationen zur App einsehen.</string>
+    <string name="tut_navigation_title">Navigations-Schritte</string>
+    <string name="tut_navigation_content">Die Eingabe Ihrer Meldung erfolgt in mehreren Schritten. Sie können sich frei zwischen den Schritten hin- und herbewegen.</string>
+    <string name="tut_qr_title">QR-Code scannen</string>#
+    <string name="tut_qr_content">Hier können Sie eine Meldung erstellen, in dem Sie einen QR-Code scannen</string>
+
+    <!-- Accessibility -->
+    <string name="mm_acc_cd_splashscreen_image">Mängelmelder</string>
+    <string name="acc_cd_btn_terms_beenden">Beenden und App schliessen</string>
+    <string name="acc_cd_layerswitcher_btn">Kartenlayer ein- oder ausblenden</string>
+    <string name="acc_cd_webview_backbutton">Zurück</string>
+    <string name="acc_cd_terms_nutzungsbedingungen_loaded">Nutzungsbedingungen, Webansicht</string>
+    <string name="acc_cd_terms_datenschutz_loaded">Datenschutz, Webansicht</string>
+    <string name="acc_cd_app_starting">App wird gestartet</string>
+    <string name="acc_cd_profile_icon">Zu Ihrem Profil</string>
+    <string name="acc_cd_msgdetail_photo">Foto der Meldung. Klicken Sie hier, um Vollbild-Modus anzuzeigen</string>
+    <string name="acc_cd_msgdetail_multiple_foto">Es gibt %1$s Fotos in dieser Meldung</string>
+    <string name="acc_cd_msgdetail_foto_x_of_y">Foto %1$s von %2$s</string>
+    <string name="acc_cd_msgdetail_closepreview">Vollbild-Modus schließen</string>
+    <string name="acc_cd_msgdetail_historyitem">Behandlung von %1$s am %2$s: %3$s</string>
+    <string name="acc_cd_overview_my_loc">Auf meine Standort zentrieren</string>
+    <string name="acc_cd_overview_message_filter">Meldung filtern</string>
+    <string name="acc_cd_overview_messages_list">Liste der Meldungen</string>
+    <string name="acc_cd_overview_home_icon">Menü öffnen</string>
+    <string name="acc_cd_overview_selected_marker">Meldungsnummer %1$s. Status: %2$s. Inhalt: %3$s</string>
+    <string name="acc_cd_marker_click">Meldungsnummer %1$s</string>
+    <string name="acc_cd_markergroup_click">%1$s Meldungen in diesem Bereich</string>
+    <string name="acc_cd_profile_photo">Foto des Nutzers</string>
+    <string name="acc_cd_msgupdate_old_image">Altes Bild</string>
+    <string name="acc_cd_msgupdate_new_image">Neues Bild</string>
+    <string name="acc_msgupdate_hint_comment">Bitte Kommentar hier eingeben.</string>
+    <string name="acc_cd_messageprocess_tabitem">Schritt %1$s</string>
+    <string name="acc_cd_categoryitemlist_more">Über diese Kategorie</string>
+    <string name="acc_cd_categorystep_selectsystem">Systeme-Auswahl</string>
+    <string name="acc_cd_categorystep_search_button">Kategorie nach Schlagwort suchen</string>
+    <string name="acc_cd_categorystep_search_cancel">Alle Kategorien ansehen</string>
+    <string name="acc_cd_categorystep_header_listitem">Oberkategorie %1$s</string>
+    <string name="acc_cd_categorystep_item_loading">Kategorie werden geladen</string>
+    <string name="acc_cd_categorystep_chosen_cat">Ausgewählte Kategorie: %1$s</string>
+    <string name="acc_cd_categorystep_rubrikbtn">Rubrik %1$s auswählen</string>
+    <string name="acc_cd_external_category_go">Ja, an %1$s weiterleiten</string>
+    <string name="acc_cd_locationstep_changemap">Kartentyp ändern</string>
+    <string name="acc_cd_locationstep_changemap_street">Straßenkarte auswählen</string>
+    <string name="acc_cd_locationstep_changemap_satellite">Satellitenkarte ändern</string>
+    <string name="acc_cd_fotostep_selected">Ausgewähltes Foto</string>
+    <string name="acc_cd_fotostep_deleteselected">Ausgewähltes Foto löschen</string>
+    <string name="acc_cd_fotostep_newimage">Neues Foto auswählen</string>
+    <string name="acc_cd_fotostep_image">Ausgewähltes Foto: %1$s</string>
+    <string name="acc_cd_summarystep_chosen_category">Zusammenfassung der Meldung. Ausgewählte Kategorie: %1$s</string>
+    <string name="acc_cd_summarystep_foto">Fotos der Meldung. Klicken Sie hier, um Fotos zu bearbeiten</string>
+    <string name="acc_cd_summarystep_multiple_foto">Sie haben %1$s Fotos</string>
+    <string name="acc_cd_summarystep_change_cat">Kategorie ändern</string>
+    <string name="acc_cd_summarystep_change_desc">Beschreibung ändern</string>
+    <string name="acc_cd_summarystep_change_attributes">Zusatzfelder bearbeiten</string>
+    <string name="acc_cd_summarystep_change_position">Standort ändern</string>
+    <string name="acc_cd_summarystep_filledoutattributes">Zusatzfelder: %1$s</string>
+    <string name="acc_msgprocess_selected_tab">%1$s selektiert.</string>
+    <string name="acc_cd_msglistitem_as_fav">Als Favorit markieren</string>
+    <string name="acc_cd_mymsglistitem">Meine Meldung. Status ist %1$s</string>
+    <string name="acc_cd_mymsglistitem_state_incomplete">Nicht komplett</string>
+    <string name="acc_cd_mymsglistitem_state_uploaded">Hochgeladen am %1$s</string>
+    <string name="acc_cd_category_info">Infos zur Kategorie %1$s: %2$s</string>
+    <string name="acc_cd_login_username">Bitte geben Sie Ihre E-Mail-Adresse</string>
+    <string name="acc_cd_login_password">Bitte geben Sie Ihr Passwort</string>
+    <string name="acc_cd_review_step_photo">Bild der Meldung</string>
+    <string name="acc_cd_message_process_viewpager">Durch Schritte des Meldung erstellens navigieren</string>
+    <string name="acc_announce_locationselected">Standort wurde ausgewählt</string>
+    <string name="acc_announce_duplicatefound">Es gibt %1$s mögliche Duplikat ihrer Meldung</string>
+    <string name="acc_announce_duplicatenotfound">Keine Duplikate gefunden</string>
+    <string name="acc_announce_foto_taken">Ein Foto wurde von %1$s genommen</string>
+    <string name="acc_announce_messages_on_map">Es gibt %1$s Meldungen auf der Karte gefunden</string>
+    <string name="acc_announce_message_updated">Ihr Kommentar wird erfolgreich gesendet</string>
+    <string name="acc_announce_message_failed_to_update">Fehler beim Hochladen Ihres Kommentar. %1$s</string>
+    <string name="acc_announce_category_search_too_short">Sie müssen mehr als 2 Buchstaben eingeben, um zu suchen</string>
+    <string name="acc_announce_location_address_found">Standort wird an %1$s gesetzt.</string>
+    <string name="acc_announce_photo_from_camera_taken">Foto wird aus Kamera genommen und gespiechert. Sie haben jetzt %1$s Bilder</string>
+    <string name="acc_announce_photo_from_gallery_taken">Foto wird aus Galerie genommen und gespiechert. Sie haben jetzt %1$s Bilder</string>
+    <string name="acc_cd_message_creation_option_qr">Neue Meldung von Scannen einer QR-Code</string>
+    <string name="acc_cd_message_creation_option_standard">Neue Meldung erstellen</string>
+</resources>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/my_messages_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/mmcolor_default_bg">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/mm_default_toolbar" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/filterpanel"
+        android:visibility="gone"
+        app:cardElevation="10dp"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/filterinfo"
+                android:gravity="start|center_vertical"
+                android:text="@string/filter"
+                android:accessibilityLiveRegion="polite"
+                style="@style/Base.TextAppearance.AppCompat.Body1"
+                android:background="@color/white"
+                android:padding="13dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/msg_count"
+                android:accessibilityLiveRegion="polite"
+                android:padding="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_marginTop="3dp"
+        android:layout_below="@id/filterpanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/status"
+        android:visibility="invisible"
+        android:layout_centerInParent="true"
+        android:accessibilityLiveRegion="polite"
+        android:text="@string/info_no_messages"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@color/gray"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

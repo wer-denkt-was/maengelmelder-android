@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mmcolor_default_bg"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.TestInfoActivity">
+
+    <TableLayout
+        android:layout_margin="10dp"
+        android:stretchColumns="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+
+            <TextView
+                android:text="@string/title_testinfo_appversion"
+                android:padding="4dp"
+                style="@style/TextAppearance.AppCompat.Subhead"/>
+
+            <TextView
+                android:id="@+id/testinfo_appversion"
+                android:layout_weight="1" />
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="@string/title_testinfo_packagename"
+                android:padding="4dp"
+                style="@style/TextAppearance.AppCompat.Subhead"/>
+
+            <TextView
+                android:id="@+id/testinfo_packagename"
+                android:layout_weight="1" />
+
+        </TableRow>
+
+
+        <TableRow>
+            <TextView
+                android:text="@string/title_testinfo_device"
+                android:padding="4dp"
+                style="@style/TextAppearance.AppCompat.Subhead" />
+
+            <TextView
+                android:id="@+id/testinfo_device"
+                android:layout_weight="1" />
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="@string/title_testinfo_endpoint"
+                android:padding="4dp"
+                style="@style/TextAppearance.AppCompat.Subhead"/>
+
+            <TextView
+                android:id="@+id/testinfo_endpoint"
+                android:layout_weight="1"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:padding="4dp"
+                android:text="@string/title_testinfo_connection" />
+            <TextView
+                android:id="@+id/testinfo_connection"
+                android:layout_weight="1" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:padding="4dp"
+                android:text="@string/title_testinfo_loggedinuser" />
+            <TextView
+                android:id="@+id/testinfo_user"
+                style="@style/TextAppearance.AppCompat.Body2"
+                android:layout_weight="1" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:padding="4dp"
+                android:text="@string/title_testinfo_token" />
+            <TextView
+                android:id="@+id/testinfo_token"
+                android:layout_weight="1" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</ScrollView>

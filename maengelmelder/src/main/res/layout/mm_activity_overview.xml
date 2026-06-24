@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/overview_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.OverviewActivity">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/mm_default_toolbar"/>
+
+    <RelativeLayout
+        android:id="@+id/parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/bottom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:layout_alignParentTop="true"
+            android:padding="10dp"
+            android:focusable="true"
+            android:screenReaderFocusable="true"
+            android:accessibilityLiveRegion="polite"
+            android:descendantFocusability="blocksDescendants"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:background="@color/mmcolor_actionbar_bg"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/detail">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:focusable="false"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginStart="10dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/detail_line1"
+                    android:focusable="false"
+                    android:textColor="@color/mmcolor_detail_textcolor"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/detail_line2"
+                    android:focusable="false"
+                    android:textSize="12sp"
+                    android:maxLines="1"
+                    android:textColor="@color/mmcolor_detail_text2color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <ImageView
+                android:importantForAccessibility="no"
+                android:src="@android:drawable/ic_menu_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/layerswitcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:contentDescription="@string/acc_cd_layerswitcher_btn"
+            android:src="@drawable/ic_map_layers"
+            android:theme="@style/MMTheme.GeneralButton" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/my_location"
+            android:contentDescription="@string/acc_cd_overview_my_loc"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_action_location_found"
+            app:backgroundTint="@color/mmcolor_btn_normal_bg"
+            app:rippleColor="@color/white"
+            app:tint="@color/mmcolor_icon_tint_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/bottom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/mmcolor_bottomtoolbar_bg"
+        android:layout_alignParentBottom="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/new_message"
+                android:contentDescription="@string/btn_new_message"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:textColor="@color/mmcolor_btn_normal_text"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:textSize="26sp"
+                android:text="+"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:id="@+id/scan_qr"
+                android:contentDescription="@string/btn_new_message_from_qr"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_qr_code"
+                app:tint="@color/mmcolor_icon_tint_1"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/new_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/message_filter"
+                android:contentDescription="@string/acc_cd_overview_message_filter"
+                android:padding="10dp"
+                android:src="@drawable/ic_filter"
+                android:layout_centerVertical="true"
+                app:tint="@color/mmcolor_icon_tint_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/message_filter_indicator"
+                android:importantForAccessibility="no"
+                app:tint="@color/red"
+                android:layout_marginStart="-20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/message_filter"
+                android:src="@drawable/rounded_white"
+                android:layout_width="10dp"
+                android:layout_height="10dp" />
+
+            <ImageView
+                android:id="@+id/message_list"
+                android:padding="10dp"
+                android:contentDescription="@string/acc_cd_overview_messages_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/message_filter"
+                app:tint="@color/mmcolor_icon_tint_1"
+                android:src="@drawable/ic_traffic_data_list"
+                />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:accessibilityLiveRegion="polite"
+        android:id="@+id/statusbar"
+        android:background="@color/mmcolor_status_bg"
+        android:visibility="gone"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_above="@id/bottom_toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:paddingEnd="4dp"
+            android:paddingStart="0dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:id="@+id/status"
+            android:textSize="12sp"
+            android:text="@string/status_loading_messages"
+            android:textColor="@color/mmcolor_status_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    
+    <ImageView
+        android:id="@+id/connectivity_status"
+        android:visibility="gone"
+        android:padding="10dp"
+        android:layout_marginRight="-3dp"
+        android:src="@drawable/ic_no_connectivity"
+        android:background="@drawable/bg_networkstatus"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

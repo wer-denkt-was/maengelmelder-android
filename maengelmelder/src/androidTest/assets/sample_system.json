@@ -1,0 +1,21 @@
+{
+  "success": true,
+  "data": {
+    "systems": [
+      {
+        "name": "www.xn--mngelmelder-l8a.de",
+        "appid": 1,
+        "bbox": [],
+        "external": false,
+        "host": "https://api.example.org/"
+      },
+      {
+        "external": true,
+        "host": "https://bms.example-city.de/",
+        "bbox": [],
+        "appid": 2,
+        "name": "bms.example-city.de"
+      }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.3.xsd">
+    <suppress>
+        <notes><![CDATA[
+            Suppress GitHub's software vulnerability CVE-2012-2055 where it hosted the package for calligraphy3
+            ]]>
+        </notes>
+        <packageUrl regex="true">^pkg:maven/io\.github\.inflationx/calligraphy3@.*$</packageUrl>
+        <vulnerabilityName>CVE-2012-2055</vulnerabilityName>
+    </suppress>
+    <suppress>
+        <notes><![CDATA[
+            Suppress GitHub's software vulnerability CVE-2020-10518 where it hosted the package for viewpump
+            ]]>
+        </notes>
+        <packageUrl regex="true">^pkg:maven/io\.github\.inflationx/viewpump@.*$</packageUrl>
+        <vulnerabilityName>CVE-2020-10518</vulnerabilityName>
+    </suppress>
+    <suppress>
+        <notes><![CDATA[
+            Suppress GitHub's software vulnerability CVE-2020-10519 where it hosted the package for viewpump
+            ]]>
+        </notes>
+        <packageUrl regex="true">^pkg:maven/io\.github\.inflationx/viewpump@.*$</packageUrl>
+        <vulnerabilityName>CVE-2020-10519</vulnerabilityName>
+    </suppress>
+    <suppress>
+        <notes><![CDATA[
+            Suppress GitHub's software vulnerability CVE-2020-10517 where it hosted the package for viewpump
+            ]]>
+        </notes>
+        <packageUrl regex="true">^pkg:maven/io\.github\.inflationx/viewpump@.*$</packageUrl>
+        <vulnerabilityName>CVE-2020-10517</vulnerabilityName>
+    </suppress>
+    <suppress>
+        <notes><![CDATA[
+            Suppress GitHub's software vulnerability CVE-2012-2055 where it hosted the package for viewpump
+            ]]>
+        </notes>
+        <packageUrl regex="true">^pkg:maven/io\.github\.inflationx/viewpump@.*$</packageUrl>
+        <vulnerabilityName>CVE-2012-2055</vulnerabilityName>
+    </suppress>
+</suppressions>

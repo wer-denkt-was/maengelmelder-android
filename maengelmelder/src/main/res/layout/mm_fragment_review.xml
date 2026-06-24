@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mmcolor_default_bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:baselineAligned="false"
+                android:id="@+id/photo_and_map"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp">
+                    <ImageButton
+                        android:id="@+id/photo"
+                        android:src="@drawable/add_photo"
+                        android:contentDescription="@string/acc_cd_review_step_photo"
+                        android:scaleType="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/txt_num_photo"
+                        android:visibility="gone"
+                        android:padding="2dp"
+                        android:layout_margin="5dp"
+                        android:textColor="@color/white"
+                        android:background="@color/darkgray_bg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/txt_err_photo_req"
+                        android:visibility="gone"
+                        android:padding="5dp"
+                        android:layout_alignParentBottom="true"
+                        android:text="@string/err_no_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:drawableStartCompat="@drawable/ic_drwtext_error" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/minimap_layout"
+                    android:layout_width="0dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+                    <androidx.fragment.app.FragmentContainerView
+                        android:id="@+id/map"
+                        android:importantForAccessibility="no"
+                        android:layout_margin="3dp"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                    <CheckBox
+                        android:id="@+id/toggle_offlinemap"
+                        android:visibility="gone"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageButton
+                        android:id="@+id/changeLoc"
+                        android:contentDescription="@string/acc_cd_summarystep_change_position"
+                        android:theme="@style/MMTheme.GeneralImageButton"
+                        app:tint="@color/mmcolor_icon_tint_1"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/content_edit" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/err_map_or_photo"
+                android:drawablePadding="15dp"
+                android:visibility="gone"
+                app:drawableStartCompat="@drawable/ic_drwtext_warn"
+                app:drawableLeftCompat="@drawable/ic_drwtext_warn"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:background="@color/lightgray"
+                android:layout_margin="5dp"
+                android:textSize="16sp"
+                style="@style/Base.TextAppearance.AppCompat.Body2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/category" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dip">
+                <ImageView
+                    android:id="@+id/catIcon"
+                    android:importantForAccessibility="no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:id="@+id/category"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <ImageButton
+                    android:id="@+id/changeCat"
+                    android:contentDescription="@string/acc_cd_summarystep_change_cat"
+                    android:theme="@style/MMTheme.GeneralImageButton"
+                    app:tint="@color/mmcolor_icon_tint_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dip"
+                    android:src="@drawable/content_edit" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:id="@+id/title_box"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title"
+                            android:background="@color/lightgray"
+                            style="@style/Base.TextAppearance.AppCompat.Body2"
+                            android:id="@+id/title_info"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="top|start"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/description_box"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="#DADADA"
+                            android:padding="1dp" />
+
+                        <TextView
+                            android:background="@color/lightgray"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Base.TextAppearance.AppCompat.Body2"
+                            android:text="@string/desc"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="top|start"
+                            android:scrollbars="vertical"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/line"
+                        android:padding="1dp" />
+
+                    <LinearLayout
+                        android:id="@+id/extras_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btnChangeDesc"
+                    android:contentDescription="@string/acc_cd_summarystep_change_desc"
+                    android:theme="@style/MMTheme.GeneralImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    app:tint="@color/mmcolor_icon_tint_1"
+                    android:src="@drawable/content_edit" />
+
+            </LinearLayout>
+
+            <TextView
+                android:background="@color/lightgray"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Base.TextAppearance.AppCompat.Body2"
+                android:text="@string/authority"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/domain"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dip" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:background="@color/lightgray"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Base.TextAppearance.AppCompat.Body2"
+                android:text="@string/message"
+                android:textSize="16sp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                app:cardElevation="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:id="@+id/attr_review"
+                        android:descendantFocusability="blocksDescendants"
+                        android:padding="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_toStartOf="@id/btnChangeAttr"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/btnChangeAttr"
+                        android:contentDescription="@string/acc_cd_summarystep_change_attributes"
+                        android:layout_alignParentEnd="true"
+                        android:theme="@style/MMTheme.GeneralImageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        app:tint="@color/mmcolor_icon_tint_1"
+                        android:src="@drawable/content_edit" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:background="@color/mmcolor_actionbar_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/msg_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <Button
+                android:id="@+id/save_message_button"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:textColor="@color/mmcolor_btn_normal_text"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:text="@string/create_message_save_button" />
+
+            <Button
+                android:id="@+id/send_message_button"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:textColor="@color/mmcolor_btn_normal_text"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:text="@string/btn_send_msg" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+</LinearLayout>

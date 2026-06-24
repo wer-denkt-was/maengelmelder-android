@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/parentLayout">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/mm_default_toolbar" />
+
+    <ScrollView
+        android:layout_below="@id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:baselineAligned="false"
+                android:layout_width="match_parent"
+                android:id="@+id/map_photo_layout"
+                android:layout_height="200dip">
+
+                <RelativeLayout
+                    android:id="@+id/map_panel"
+                    android:accessibilityLiveRegion="polite"
+                    android:focusable="true"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="5dip">
+
+                    <fragment
+                        android:id="@+id/mapview"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                    <CheckBox
+                        android:focusable="false"
+                        android:visibility="gone"
+                        android:id="@+id/toggle_offlinemap"
+                        android:text="@string/chk_offlinetoggle"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:importantForAccessibility="no"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/image_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:id="@+id/image"
+                        android:contentDescription="@string/acc_cd_msgdetail_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/add_photo"
+                        android:layout_margin="5dip" />
+                    <TextView
+                        android:id="@+id/txt_num_photo"
+                        android:visibility="gone"
+                        android:padding="2dp"
+                        android:layout_margin="5dp"
+                        android:textColor="@color/white"
+                        android:background="@color/darkgray_bg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/details"
+                android:accessibilityLiveRegion="polite"
+                android:orientation="vertical"
+                android:paddingBottom="60dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/bottom_menu"
+        android:accessibilityTraversalAfter="@id/details"
+        android:background="@color/mmcolor_actionbar_bg"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/update_subscribe"
+                android:visibility="gone"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:textColor="@color/mmcolor_btn_normal_text"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:text="@string/email_sub" />
+
+            <Button
+                android:id="@+id/update_message_button"
+                android:layout_width="0dp"
+                android:visibility="gone"
+                android:layout_height="fill_parent"
+                android:theme="@style/MMTheme.GeneralButton"
+                android:textColor="@color/mmcolor_btn_normal_text"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:text="@string/add_comment"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/bigimagelayout"
+        android:accessibilityTraversalAfter="@id/bottom_menu"
+        android:background="@color/darkgray_bg"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.maengelmelder.mainmodule.customviews.SwipeToggleableViewPager
+            android:id="@+id/viewpager_bigimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@+id/removePreview"
+            android:contentDescription="@string/acc_cd_msgdetail_closepreview"
+            android:padding="15dp"
+            android:src="@android:drawable/ic_delete"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/loading"
+        android:visibility="gone"
+        android:background="@color/darkgray_transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:visibility="visible"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</RelativeLayout>

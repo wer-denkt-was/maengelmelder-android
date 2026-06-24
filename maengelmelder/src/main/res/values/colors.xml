@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="lightgray">#50D3D3D3</color>
+    <color name="lightgray_transparent">#62D3D3D3</color>
+    <color name="gray">#707070</color>
+    <color name="darkgray_bg">#B7000000</color>
+    <color name="darkgray_transparent">#89000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="red">#cf0000</color>
+    <color name="darker_red">#a51d2d</color>
+    <color name="black">#000000</color>
+    <color name="blue">#0000ff</color>
+    <color name="lightblue">#ADD8E6</color>
+    <color name="darkblue">#000080</color>
+    <color name="line">#DADADA</color>
+    <color name="green">#00ff00</color>
+    <color name="turkis">#1b8683</color>
+
+    <color name="mm_darkblue">#10373E</color>
+    <color name="mm_cyan_transparent">#A7358d8c</color>
+    <color name="mm_cyan">#357f8c</color>
+
+    <!-- Use this, not the colors above. Override these colors if needed -->
+    <color name="mmcolor_category_listitem_normal_bg">@color/white</color>
+    <color name="mmcolor_category_listitem_normal_text">@color/black</color>
+    <color name="mmcolor_category_listitem_chosen_bg">@color/mm_darkblue</color>
+    <color name="mmcolor_category_listitem_chosen_text">@color/white</color>
+
+    <!-- Message indicator on message list -->
+    <color name="mmcolor_step_clicked_bg">#dfdfdf</color>
+    <color name="mmcolor_step_incomplete_icontint">@color/lightgray</color>
+    <color name="mmcolor_step_completed_icontint">@color/mm_cyan</color>
+
+    <!--Detail panel when clicking marker-->
+    <color name="mmcolor_detail_textcolor">@color/white</color>
+    <color name="mmcolor_detail_text2color">@color/white</color>
+
+    <!-- Overview sliding menu -->
+    <color name="mmcolor_slidingmenu_bg">@color/mm_cyan</color>
+    <color name="mmcolor_slidingmenu_text">@color/white</color>
+    <color name="mmcolor_slidingmenu_banner_bg">@color/white</color>
+
+    <!-- Actionbar and toolbars -->
+    <color name="mmcolor_bottomtoolbar_bg">@color/mm_darkblue</color>
+    <color name="mmcolor_actionbar_bg">@color/mm_darkblue</color>
+    <color name="mmcolor_accent">@color/green</color>
+    <color name="mmcolor_actionbar_title_text">@color/white</color>
+    <color name="mmcolor_actionbar_subtitle_text">@color/white</color>
+    <color name="mmcolor_actionbar_control">@color/white</color>
+
+    <!-- FloatingActionButton -->
+    <color name="mmcolor_fab_bg">@color/mm_cyan</color>
+    <color name="mmcolor_fab_icon_tint">@color/white</color>
+
+    <!-- Showcase -->
+    <color name="mmcolor_showcase_bg">@color/mm_cyan</color>
+    <color name="mmcolor_showcase_circle">@color/mm_darkblue</color>
+    <color name="mmcolor_showcase_title_text">@color/white</color>
+    <color name="mmcolor_showcase_content_text">@color/white</color>
+
+    <!--Progress and status-->
+    <color name="mmcolor_status_bg">@color/mm_darkblue</color>
+    <color name="mmcolor_status_text">@color/white</color>
+    <color name="mmcolor_progress_tint">@color/lightblue</color>
+
+    <!-- Icon. tint_1 is general icon color -->
+    <color name="mmcolor_icon_tint_1">@color/white</color>
+    <color name="mmcolor_icon_tint_on_white">@color/mm_darkblue</color>
+
+    <!-- Tabs in message process -->
+    <color name="mmcolor_tab_selected_bg">@color/mm_darkblue</color>
+    <color name="mmcolor_tab_selected_text">@color/white</color>
+    <color name="mmcolor_tab_normal_bg">@color/lightblue</color>
+    <color name="mmcolor_tab_normal_text">@color/mm_darkblue</color>
+
+    <!-- General button -->
+    <color name="mmcolor_btn_normal_bg">@color/mm_darkblue</color>
+    <color name="mmcolor_btn_normal_bg2">@color/turkis</color>
+    <color name="mmcolor_btn_normal_text">@color/white</color>
+
+    <!-- Arrow colors -->
+    <color name="mmcolor_arrow_tint">@color/white</color>
+    <color name="mmcolor_arrow_tint_2">@color/mm_cyan</color>
+
+    <!-- Backgrounds -->
+    <color name="mmcolor_loadingpanel_bg">@color/gray</color>
+    <color name="mmcolor_default_bg">@color/white</color>
+    <color name="mmcolor_border">@color/black</color>
+
+    <!-- Individual texts -->
+    <color name="mmcolor_appversion_text">@color/black</color>
+    <color name="mmcolor_no_cat_selected_text">@color/gray</color>
+    <color name="mmcolor_login_logout_text">@color/white</color>
+    <color name="mmcolor_pref_category_text">@color/mm_darkblue</color>
+
+    <!-- Checkbox -->
+    <color name="mmcolor_fav">@color/mm_cyan</color>
+    <color name="mmcolor_checkbox_color">@color/mm_cyan</color>
+
+</resources>

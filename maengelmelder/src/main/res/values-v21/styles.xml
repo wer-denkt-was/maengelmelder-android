@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MMTheme" parent="MMBaseTheme">
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+    </style>
+
+    <style name="MMTheme.ToolbarText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="MMTheme.ToolbarSubText" parent="TextAppearance.AppCompat.Widget.ActionBar.Subtitle">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="MMTheme.GeneralButton" parent="MMTheme.BaseButton">
+        <item name="android:colorButtonNormal">@color/mmcolor_btn_normal_bg</item>
+        <item name="android:textColor">@color/mmcolor_btn_normal_text</item>
+    </style>
+    <style name="MMTheme.GeneralButton2" parent="MMTheme.BaseButton2">
+        <item name="android:colorButtonNormal">@color/white</item>
+        <item name="android:textColor">@color/turkis</item>
+    </style>
+
+    <style name="MMTheme.BaseImageButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:colorButtonNormal">@color/mmcolor_btn_normal_bg</item>
+        <item name="android:textColor">@color/mmcolor_btn_normal_text</item>
+    </style>
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <de.maengelmelder.mainmodule.utils.WebView2
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_history_back"
+        android:visibility="gone"
+        android:contentDescription="@string/acc_cd_webview_backbutton"
+        android:layout_margin="10dp"
+        android:theme="@style/MMTheme.GeneralButton"
+        android:src="@drawable/arrow_left_themed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ProgressBar
+        android:id="@+id/loadingBar"
+        android:max="100"
+        android:progressTint="@color/mmcolor_progress_tint"
+        android:progress="0"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/err_not_loading"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:drawablePadding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:drawableTopCompat="@drawable/ic_drwtext_warn" />
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/text"
+        android:text="@string/err_location_not_found"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_below="@id/text"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/btn_gps_activate"
+        android:text="@string/dialog_gps_activate"
+        android:theme="@style/MMTheme.GeneralButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_loc_perm"
+        android:visibility="gone"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/btn_gps_activate"
+        android:text="@string/dialog_loc_perm"
+        android:theme="@style/MMTheme.GeneralButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/btn_loc_perm"
+        android:text="@string/dialog_cancel"
+        android:theme="@style/MMTheme.GeneralButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <CheckBox
+        android:layout_below="@id/btn_cancel"
+        android:minHeight="48dp"
+        android:id="@+id/chk_dont_show"
+        android:text="@string/dialog_permission_dontshow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mmcolor_default_bg">
+
+    <LinearLayout
+        android:id="@+id/layout_searchbar"
+        android:visibility="visible"
+        android:padding="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <EditText
+            android:id="@+id/category_search"
+            android:imeOptions="actionSearch"
+            android:autofillHints="name"
+            android:inputType="text"
+            android:hint="@string/category_search_hint"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/category_cancel"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:contentDescription="@string/acc_cd_categorystep_search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageButton
+            android:id="@+id/btn_search_category"
+            android:contentDescription="@string/acc_cd_categorystep_search_button"
+            android:theme="@style/MMTheme.GeneralButton"
+            android:layout_marginStart="5dp"
+            android:src="@android:drawable/ic_menu_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:layout_below="@id/layout_searchbar"
+        android:id="@+id/category_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/step_cat_explain"
+            android:text="@string/step_category_info"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/systems_spinner"
+            android:layout_below="@id/step_cat_explain"
+            android:contentDescription="@string/acc_cd_categorystep_selectsystem"
+            android:spinnerMode="dialog"
+            android:background="@drawable/spinner_bg"
+            android:padding="8dp"
+            android:minHeight="48dp"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </Spinner>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/rubric_info"
+            android:layout_below="@id/systems_spinner"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_margin="5dp"
+                android:id="@+id/rubric_info_text"
+                android:text="@string/form_category_rubrikinfo_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btn_back_to_rubric"
+                android:theme="@style/MMTheme.GeneralButton"
+                android:text="@string/form_category_btn_back_to_rubric"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <ExpandableListView
+            android:id="@+id/list"
+            android:importantForAccessibility="no"
+            android:accessibilityLiveRegion="polite"
+            android:layout_below="@id/rubric_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/warn_no_location"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:padding="30dp"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:accessibilityLiveRegion="polite"
+            android:screenReaderFocusable="true"
+            android:text="@string/warn_no_location"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:drawableTopCompat="@drawable/ic_drwtext_warn" />
+
+        <TextView
+            android:id="@+id/warn_no_category_found"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:padding="30dp"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:accessibilityLiveRegion="polite"
+            android:screenReaderFocusable="true"
+            android:text="@string/warn_no_category_found"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:drawableTopCompat="@drawable/ic_drwtext_warn" />
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:accessibilityTraversalAfter="@id/list"
+            android:id="@+id/duplicateview"
+            android:visibility="gone"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="5dp"
+                app:cardElevation="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_margin="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/step_dupfound_explain"
+                        android:visibility="gone"
+                        android:layout_marginBottom="3dp"
+                        android:textColor="@color/black"
+                        android:padding="5dp"
+                        android:background="@android:color/holo_orange_dark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                     <ImageView
+                         android:layout_below="@id/step_dupfound_explain"
+                         android:id="@+id/dup_icon"
+                         android:importantForAccessibility="no"
+                         android:focusable="false"
+                         android:scaleType="center"
+                         android:layout_width="50dp"
+                         android:layout_height="50dp" />
+                     <TextView
+                         android:layout_below="@id/step_dupfound_explain"
+                         android:id="@+id/dup_cat_name"
+                         android:layout_toEndOf="@id/dup_icon"
+                         android:layout_marginStart="20dp"
+                         android:textStyle="bold"
+                         android:gravity="center"
+                         style="@style/TextAppearance.AppCompat.Medium"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_toEndOf="@id/dup_icon"
+                        android:layout_below="@id/dup_cat_name"
+                        android:layout_marginStart="20dp"
+                        android:id="@+id/numOfDuplicates"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_num_duplicates"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_ignore"
+                        android:layout_below="@id/numOfDuplicates"
+                        android:layout_alignParentEnd="true"
+                        android:theme="@style/MMTheme.GeneralButton"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/btn_ignore_dup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <ListView
+                android:id="@+id/duplicateList"
+                android:focusable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/rubrik_layout"
+        android:visibility="gone"
+        android:layout_below="@id/layout_searchbar"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="@string/form_category_rubrik_title"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:id="@+id/rubrik_buttons"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

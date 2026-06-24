@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/mm_default_toolbar" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_pick_defectreport"
+        android:layout_weight="1"
+        android:alpha="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardElevation="5dp"
+        android:contentDescription="@string/pick_defectreport">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:importantForAccessibility="no"
+                android:scaleType="centerCrop"
+                android:src="@drawable/mm_bg_maengel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/txt_pick_defectreport"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/white"
+                android:text="@string/pick_defectreport"
+                android:background="@color/darkgray_transparent"
+                style="@style/TextAppearance.AppCompat.Display1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_pick_idea"
+        android:layout_weight="1"
+        android:alpha="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardElevation="5dp"
+        android:contentDescription="@string/pick_idea">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:importantForAccessibility="no"
+                android:src="@drawable/mm_bg_idee"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/txt_pick_idea"
+                android:gravity="center"
+                android:text="@string/pick_idea"
+                android:textColor="@color/white"
+                android:background="@color/darkgray_transparent"
+                style="@style/TextAppearance.AppCompat.Display1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

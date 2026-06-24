@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:focusable="false"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:layout_margin="5dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:focusable="false"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text1"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Base.TextAppearance.AppCompat.SearchResult.Subtitle"/>
+
+        <LinearLayout
+            android:id="@+id/upload_status"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/uploadText"
+                android:textStyle="italic"
+                android:drawablePadding="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/statuses"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/status_location"
+                android:padding="7dp"
+                android:src="@drawable/ic_step_standort"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <ImageView
+                android:id="@+id/status_photo"
+                android:padding="7dp"
+                android:src="@drawable/ic_step_photo"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <ImageView
+                android:id="@+id/status_category"
+                android:padding="7dp"
+                android:src="@drawable/ic_step_category"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <ImageView
+                android:id="@+id/status_attributes"
+                android:padding="7dp"
+                android:src="@drawable/ic_step_edit"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:focusable="false"
+        android:id="@+id/thumbnail"
+        android:layout_width="80dp"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:adjustViewBounds="true"
+            android:layout_margin="5dip" />
+        <TextView
+            android:id="@+id/more_indicator"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:padding="5dp"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/splashscreenLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:contentDescription="@string/mm_acc_cd_splashscreen_image"
+            android:id="@+id/splashscreen"
+            android:src="@drawable/mm_splashscreen"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include android:id="@+id/splashcreen_status" layout="@layout/mm_layout_splashscreen_terms_status" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

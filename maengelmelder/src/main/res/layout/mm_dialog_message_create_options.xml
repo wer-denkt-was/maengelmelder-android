@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_create_message_qr"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/acc_cd_message_creation_option_qr"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:importantForAccessibility="noHideDescendants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="25dp">
+            <ImageView
+                android:id="@+id/img_qr"
+                android:importantForAccessibility="no"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_qr_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/qr_title"
+                android:importantForAccessibility="no"
+                android:layout_below="@id/img_qr"
+                android:gravity="center_horizontal"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:text="@string/message_create_option_qr_code_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_below="@id/qr_title"
+                android:importantForAccessibility="no"
+                android:gravity="center_horizontal"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:text="@string/message_create_option_qr_code_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_create_message_standard"
+        android:contentDescription="@string/acc_cd_message_creation_option_standard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_margin="10dp"
+        android:foreground="?attr/selectableItemBackground">
+        <RelativeLayout
+            android:importantForAccessibility="noHideDescendants"
+            android:padding="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/img_standard_message"
+                android:importantForAccessibility="no"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_envelope_big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/standard_message_title"
+                android:importantForAccessibility="no"
+                android:layout_below="@id/img_standard_message"
+                android:gravity="center_horizontal"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:text="@string/message_create_option_standard_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_below="@id/standard_message_title"
+                android:importantForAccessibility="no"
+                android:gravity="center_horizontal"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:text="@string/message_create_option_standard_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

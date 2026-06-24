@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mmcolor_step_clicked_bg">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!--Not used-->
+    <TextView
+        android:visibility="gone"
+        android:layout_margin="8dp"
+        android:padding="10dp"
+        android:screenReaderFocusable="true"
+        android:focusable="true"
+        android:id="@+id/location_text"
+        android:textColor="@color/white"
+        android:text="@string/position_instructions"
+        android:background="@color/darkgray_transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/location_search_layout"
+        android:padding="8dp"
+        android:background="@color/mmcolor_actionbar_bg"
+        android:orientation="horizontal"
+        android:layout_below="@id/location_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/address_search"
+            android:focusable="true"
+            android:padding="10dp"
+            android:background="@drawable/rounded_banner_text_color"
+            android:visibility="visible"
+            android:imeOptions="actionSearch"
+            android:autofillHints="postalAddress"
+            android:hint="@string/edittext_search_address_hint"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:inputType="textPostalAddress" />
+        <Button
+            android:id="@+id/btn_address_search"
+            android:text="@string/search_address_btn_text"
+            android:theme="@style/MMTheme.GeneralButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ImageView
+        android:visibility="gone"
+        android:importantForAccessibility="no"
+        android:layout_below="@id/location_text"
+        android:layout_centerVertical="true"
+        android:id="@+id/manual_latlon_entry"
+        android:layout_marginStart="10dp"
+        android:padding="5dp"
+        android:background="@color/mmcolor_actionbar_bg"
+        android:src="@drawable/ic_center_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tint="@color/mmcolor_icon_tint_1" />
+
+    <ImageView
+        android:importantForAccessibility="no"
+        android:id="@+id/crosshair"
+        app:tint="@color/black"
+        android:scaleType="fitCenter"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_map_center_point"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+
+    <ImageView
+        android:id="@+id/crosshair_marker"
+        android:layout_above="@id/crosshair"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-30dp"
+        android:src="@drawable/ic_new_marker"
+        android:layout_width="70dp"
+        android:layout_height="70dp" />
+
+    <CheckBox
+        android:padding="5dp"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:text="@string/chk_offlinetoggle"
+        android:layout_marginBottom="7dp"
+        android:id="@+id/toggle_offlinemap"
+        android:layout_above="@id/bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/lock_pos"
+                android:padding="15dp"
+                android:textStyle="bold"
+                android:theme="@style/MMTheme.GeneralButton"
+                android:layout_centerInParent="true"
+                android:textColor="@color/mmcolor_btn_normal_text"
+                android:text="@string/position_set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="RelativeOverlap" />
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/my_location"
+        android:contentDescription="@string/acc_cd_overview_my_loc"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_action_location_found"
+        app:backgroundTint="@color/mmcolor_btn_normal_bg"
+        app:rippleColor="@color/white"
+        app:tint="@color/mmcolor_icon_tint_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/switch_map_display"
+        android:contentDescription="@string/acc_cd_locationstep_changemap"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/my_location"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_satellite_circular"
+        android:scaleType="centerInside"
+        app:maxImageSize="56dp"
+        app:backgroundTint="@color/mmcolor_btn_normal_bg"
+        app:rippleColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/warn_position_not_needed"
+        android:visibility="gone"
+        style="@style/TextAppearance.AppCompat.Medium"
+        app:drawableLeftCompat="@drawable/ic_drwtext_warn"
+        android:importantForAccessibility="yes"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_centerInParent="true"
+        android:text="@string/warn_position_not_needed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

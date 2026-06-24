@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_aboutapp"
+        android:title="@string/menu_about"/>
+    <item
+        android:id="@+id/menu_terms"
+        android:title="@string/menu_help"/>
+    <item
+        android:id="@+id/menu_privacy"
+        android:title="@string/menu_datenschutz"/>
+    <item
+        android:id="@+id/menu_impressum"
+        android:title="@string/menu_impressum"/>
+    <item
+        android:id="@+id/menu_my_idea"
+        android:title="@string/menu_myideas"/>
+</menu>

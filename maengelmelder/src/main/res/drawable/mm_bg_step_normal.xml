@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="60dp"
+    android:height="20dp"
+    android:viewportWidth="60.0"
+    android:viewportHeight="20.0">
+
+    <group>
+        <!-- Square-->
+        <path android:pathData="M 0 0 L 60 0 L 60 20 L 0 20 Z"
+            android:fillColor="@color/mmcolor_tab_normal_bg"/>
+    </group>
+    <group>
+        <path
+            android:pathData="M 0 0 L 2 0 L 12 10 L 2 20 L 0 20 L 10 10 Z"
+            android:fillColor="@color/mmcolor_tab_selected_bg"/>
+    </group>
+
+</vector>

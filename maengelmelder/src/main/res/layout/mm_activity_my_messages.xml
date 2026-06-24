@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/my_messages_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mmcolor_default_bg">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/mm_default_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/filter"
+        android:padding="5dp"
+        android:background="@color/lightgray_transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar">
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rb_not_uploaded_messages"
+                android:minHeight="48dp"
+                android:focusable="true"
+                android:text="@string/info_incomplete_message_list_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/rb_uploaded_messages"
+                android:checked="true"
+                android:minHeight="48dp"
+                android:focusable="true"
+                android:text="@string/info_uploaded_message_list_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+        <ProgressBar
+            android:id="@+id/loading_message_update"
+            android:importantForAccessibility="no"
+            android:visibility="gone"
+            android:layout_marginStart="5dp"
+            android:layout_below="@id/radio_group"
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
+        <TextView
+            android:id="@+id/text_message_update"
+            android:layout_marginStart="10dp"
+            android:text="@string/loading_message_update"
+            android:visibility="gone"
+            android:layout_toEndOf="@id/loading_message_update"
+            android:layout_below="@id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/list_swipe_refresh"
+        android:layout_below="@id/filter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/no_saved_messages"
+        android:accessibilityLiveRegion="polite"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:padding="20dp"
+        android:background="@color/darkgray_transparent"
+        android:text="@string/info_no_saved_messages"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
