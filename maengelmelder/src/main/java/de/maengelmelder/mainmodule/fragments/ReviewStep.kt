@@ -118,6 +118,9 @@ class ReviewStep : BaseMessageStepFragment(), View.OnClickListener, CompoundButt
         mDescEdit = v?.findViewById(R.id.btnChangeDesc)
         mBtnNext = v?.findViewById(R.id.send_message_button)
         mBtnSave = v?.findViewById(R.id.save_message_button)
+
+        FontUtil.applyCustomFont(mBtnNext)
+        FontUtil.applyCustomFont(mBtnSave)
         mChkOfflineMap = v?.findViewById(R.id.toggle_offlinemap)
         mBtnChangeLoc = v?.findViewById(R.id.changeLoc)
         mAttribReview = v?.findViewById(R.id.attr_review)

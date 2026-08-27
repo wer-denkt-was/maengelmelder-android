@@ -40,6 +40,7 @@ import de.maengelmelder.mainmodule.objects.builder.MessageBuilder
 import de.maengelmelder.mainmodule.utils.AccessibilityUtil
 import de.maengelmelder.mainmodule.service.ForegroundLocationService
 import de.maengelmelder.mainmodule.utils.ActivityUtil
+import de.maengelmelder.mainmodule.utils.FontUtil
 import de.maengelmelder.mainmodule.utils.GoogleMapHelper
 import de.maengelmelder.mainmodule.utils.ResourceProxy
 import de.maengelmelder.mainmodule.utils.interfaces.IMapHelper
@@ -140,6 +141,9 @@ class ChooseLocationStep : BaseMessageStepFragment(), View.OnClickListener, Comp
         mAddressSearch = v?.findViewById(R.id.address_search)
         mAddressSearchLayout = v?.findViewById(R.id.location_search_layout)
         mBtnAddressSearch = v?.findViewById(R.id.btn_address_search)
+
+        FontUtil.applyCustomFont(mBtnLockPosition)
+        FontUtil.applyCustomFont(mBtnAddressSearch)
 
         if (!MMConstants.EnableAddressSearch) {
             mAddressSearchLayout?.visibility = View.GONE

@@ -172,6 +172,11 @@ class MessageDetailActivity : AppCompatActivity(), MMBMS.BMSListener<MessageDeta
             updateSubscribe.setOnClickListener(this@MessageDetailActivity)
             // Animation
             image.startAnimation(AnimationUtils.loadAnimation(this@MessageDetailActivity, R.anim.anim_enter_from_right))
+
+            // These buttons sit directly inside a Toolbar container, which Calligraphy/ViewPump
+            // doesn't reach automatically during inflation.
+            FontUtil.applyCustomFont(updateMessageButton)
+            FontUtil.applyCustomFont(updateSubscribe)
         }
 
         val ctx = this@MessageDetailActivity
