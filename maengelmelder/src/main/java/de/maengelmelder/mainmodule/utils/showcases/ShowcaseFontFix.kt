@@ -19,7 +19,11 @@ internal object ShowcaseFontFix {
         app.registerActivityLifecycleCallbacks(object : Application.ActivityLifecycleCallbacks {
             override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
                 if (activity is ShowcaseActivity) {
-                    applyFont(activity)
+                    // onActivityCreated fires as soon as ShowcaseActivity.onCreate() calls
+                    // super.onCreate() - before its own onCreate() body runs setContentView()
+                    // and populates the description/button text. Defer to the next message
+                    // loop iteration so those views actually exist by the time we look them up.
+                    activity.window.decorView.post { applyFont(activity) }
                 }
             }
             override fun onActivityStarted(activity: Activity) {}
