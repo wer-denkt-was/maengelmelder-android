@@ -10,6 +10,7 @@ import de.maengelmelder.mainmodule.activities.SplashscreenActivity
 import de.maengelmelder.mainmodule.activities.TermsActivity
 import de.maengelmelder.mainmodule.service.ForegroundLocationService
 import de.maengelmelder.mainmodule.utils.images.ImageManipulator
+import de.maengelmelder.mainmodule.utils.showcases.ShowcaseFontFix
 import io.github.inflationx.calligraphy3.CalligraphyConfig
 import io.github.inflationx.calligraphy3.CalligraphyInterceptor
 import io.github.inflationx.viewpump.ViewPump
@@ -58,6 +59,12 @@ class MMInitiator (c: Context) {
                 ViewPump.init(ViewPump.builder()
                         .addInterceptor(CalligraphyInterceptor(config))
                         .build())
+
+                // ShowcaseView (tutorial overlays) runs its own Activity outside our own,
+                // so ViewPump above never reaches it
+                (c.applicationContext as? android.app.Application)?.let {
+                    ShowcaseFontFix.registerIn(it)
+                }
             }
 
             // init additional modes
