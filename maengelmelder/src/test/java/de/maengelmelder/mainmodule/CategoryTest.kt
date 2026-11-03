@@ -2,6 +2,7 @@ package de.maengelmelder.mainmodule
 
 import de.maengelmelder.mainmodule.objects.Attribute
 import de.maengelmelder.mainmodule.objects.Category
+import org.json.JSONObject
 import org.junit.Assert
 import org.junit.Test
 
@@ -62,17 +63,32 @@ class CategoryTest {
 
     @Test
     fun attributeIdsForUpdate() {
-        val cat = Category().apply {
-            attrIds = arrayListOf(1, 2, 3, 4, 5, 6, 7)
-            attrIdsMessage = arrayListOf(2, 3, 4, 5)
-        }
-        val updateIds = cat.getAttributeIdsForUpdate()
+        // The attribute ids for update are delivered by the server ("attributeids_update")
+        // and are not derived from "attributeids" and "attributeids_message".
+        val cat = Category.fromJSON(JSONObject("""
+            {
+              "id": 149,
+              "domain": { "id": "25", "title": "Test" },
+              "attributeids": [1, 2, 3, 4, 5, 6, 7],
+              "attributeids_message": [2, 3, 4, 5],
+              "attributeids_update": [3, 0, 6]
+            }
+        """.trimIndent()))
+
+        Assert.assertEquals(listOf(1, 2, 3, 4, 5, 6, 7), cat.attrIds)
+        Assert.assertEquals(listOf(2, 3, 4, 5), cat.attrIdsMessage)
         Assert.assertEquals(
-                "there are 3 attributes needed for update",
-            3, updateIds.size)
-        Assert.assertTrue(
-                "attribute ids for update",
-                updateIds.contains(1) && updateIds.contains(6) && updateIds.contains(7))
+                "attribute ids for update are taken from the server, invalid ids are skipped",
+                listOf(3, 6), cat.getAttributeIdsForUpdate())
+    }
+
+    @Test
+    fun attributeIdsForUpdateEmptyWithoutServerList() {
+        val cat = Category().apply {
+            attrIds = arrayListOf(1, 2, 3)
+            attrIdsMessage = arrayListOf(2)
+        }
+        Assert.assertTrue(cat.getAttributeIdsForUpdate().isEmpty())
     }
 
     @Test
