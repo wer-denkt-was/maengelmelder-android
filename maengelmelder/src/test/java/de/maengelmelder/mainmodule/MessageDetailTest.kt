@@ -155,7 +155,9 @@ class MessageDetailTest {
 
     @Test
     fun parse() {
-        val md = MessageDetail.fromJSON(JSONObject(json))
+        // fromJSON expects the whole API response, where the message is wrapped in "data"
+        val response = JSONObject().put("data", JSONObject(json))
+        val md = MessageDetail.fromJSON(response)
         Assert.assertEquals("marker color id is correctly parsed",
                 "green", md.colorString)
         Assert.assertEquals("latitude is correctly parsed",
