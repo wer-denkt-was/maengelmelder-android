@@ -634,8 +634,7 @@ class ChooseCategoryStep : BaseMessageStepFragment(),
         // Set the picked category to the message builder
         builder?.let { b ->
             cat?.run {
-                val extUrl = externalURL
-                if (extUrl != null && extUrl.isNotEmpty() && extUrl.startsWith("http")) {
+                if (isExternal) {
                     // If external URL is not empty, this category is an external category and thus
                     // doesn't have anything to do with our system anymore
                     // We prompt the user and if the user agrees, leads them to the given URL in browser

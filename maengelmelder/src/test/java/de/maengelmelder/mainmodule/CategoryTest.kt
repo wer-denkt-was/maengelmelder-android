@@ -104,4 +104,24 @@ class CategoryTest {
         Assert.assertTrue("category has attribute with given ID", cat.hasAttribute("1"))
     }
 
+    @Test
+    fun externalCategoryDetection() {
+        fun cat(url: String?) = Category().apply { externalURL = url }
+
+        Assert.assertFalse(cat(null).isExternal)
+        Assert.assertFalse(cat("").isExternal)
+        Assert.assertFalse(cat("ftp://example.org").isExternal)
+        Assert.assertFalse(cat("www.example.org").isExternal)
+
+        Assert.assertTrue(cat("http://example.org").isExternal)
+        Assert.assertTrue(cat("https://example.org").isExternal)
+        Assert.assertTrue(cat(" HTTPS://example.org ").isExternal)
+        Assert.assertTrue(cat("mailto:info@example.org").isExternal)
+        Assert.assertTrue(cat("MailTo:info@example.org?subject=Bäche melden").isExternal)
+
+        Assert.assertFalse(cat("https://example.org").isExternalMail)
+        Assert.assertFalse(cat(null).isExternalMail)
+        Assert.assertTrue(cat("mailto:info@example.org").isExternalMail)
+        Assert.assertTrue(cat(" MAILTO:info@example.org?subject=x").isExternalMail)
+    }
 }

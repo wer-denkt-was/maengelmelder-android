@@ -154,6 +154,9 @@
     <string name="cat_dialog_confirm">Verstanden</string>
     <string name="loading_finding_dup">Es wird nach Duplikaten gesucht&#8230;</string>
     <string name="dialog_ext_category_content">Meldungen für die Kategorie \"%1$s\" werden mit dieser App nicht entgegen genommen. Sie werden für das Thema auf eine externe Seite \"%2$s\" weiter geleitet. Möchten Sie fortfahren?</string>
+    <string name="dialog_ext_category_mail_content">Meldungen für die Kategorie \"%1$s\" werden mit dieser App nicht entgegen genommen. Für das Thema wird Ihr E-Mail-Programm geöffnet, um eine E-Mail an \"%2$s\" zu schreiben. Möchten Sie fortfahren?</string>
+    <string name="dialog_ext_category_mail_error">Es konnte kein E-Mail-Programm geöffnet werden. Bitte senden Sie Ihre Meldung an: %1$s</string>
+    <string name="dialog_ext_category_url_error">Die Seite konnte nicht geöffnet werden: %1$s</string>
     <string name="warn_duplicate_found"></string>
     <string name="form_category_rubrik_title">Bitte wählen Sie einen Rubrik</string>
     <string name="form_category_rubrikinfo_title">Rubrik: %1$s</string>
@@ -532,6 +535,7 @@
     <string name="acc_cd_categorystep_chosen_cat">Ausgewählte Kategorie: %1$s</string>
     <string name="acc_cd_categorystep_rubrikbtn">Rubrik %1$s auswählen</string>
     <string name="acc_cd_external_category_go">Ja, an %1$s weiterleiten</string>
+    <string name="acc_cd_external_category_mail_go">Ja, E-Mail an %1$s schreiben</string>
     <string name="acc_cd_locationstep_changemap">Kartentyp ändern</string>
     <string name="acc_cd_locationstep_changemap_street">Straßenkarte auswählen</string>
     <string name="acc_cd_locationstep_changemap_satellite">Satellitenkarte ändern</string>

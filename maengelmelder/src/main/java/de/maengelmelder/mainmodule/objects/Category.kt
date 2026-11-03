@@ -132,6 +132,23 @@ class Category : Serializable, IdGenerable {
     var ordering: Int = 0
     var isSeen: Boolean = false
     var externalURL: String? = null
+
+    /**
+     * True if this category is an external category, i.e. [externalURL] is a http(s) or mailto link.
+     * Messages for external categories are not accepted by the app, the user is redirected instead.
+     */
+    val isExternal: Boolean
+        get() {
+            val url = externalURL?.trim()?.lowercase() ?: return false
+            return url.startsWith("http://") || url.startsWith("https://") || url.startsWith("mailto:")
+        }
+
+    /**
+     * True if [externalURL] is a mailto link, which should open the user's mail app
+     */
+    val isExternalMail: Boolean
+        get() = externalURL?.trim()?.lowercase()?.startsWith("mailto:") == true
+
     var attrIds: ArrayList<Int> = arrayListOf()
     var attrIdsMessage: ArrayList<Int> = arrayListOf()
     var attrIdsUpdate: ArrayList<Int> = arrayListOf()
