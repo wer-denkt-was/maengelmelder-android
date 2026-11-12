@@ -32,10 +32,12 @@ import de.maengelmelder.mainmodule.database.MMDB
 import de.maengelmelder.mainmodule.network.MMBMS
 import de.maengelmelder.mainmodule.network.coroutines.v1.MMv1AddressSearch
 import de.maengelmelder.mainmodule.network.coroutines.v1.MMv1Domain
+import de.maengelmelder.mainmodule.network.coroutines.v1.MMv1System
 import de.maengelmelder.mainmodule.network.responses.BaseResponse
 import de.maengelmelder.mainmodule.objects.AddressSearchResult
 import de.maengelmelder.mainmodule.objects.Category
 import de.maengelmelder.mainmodule.objects.Domain
+import de.maengelmelder.mainmodule.objects.SystemInfo
 import de.maengelmelder.mainmodule.objects.builder.MessageBuilder
 import de.maengelmelder.mainmodule.utils.AccessibilityUtil
 import de.maengelmelder.mainmodule.service.ForegroundLocationService
@@ -455,9 +457,44 @@ class ChooseLocationStep : BaseMessageStepFragment(), View.OnClickListener, Comp
                                                lat: Double,
                                                lon: Double,
                                                loadingDialog: LoadingDialog? = null) {
+        if (!b.isCategoryLocked()) {
+            requestDomainCoverage(ctx, b, lat, lon, null, loadingDialog)
+            return
+        }
+
+        // A category forced by a link can belong to an external system (e.g. sags-doch.de),
+        // whose domains are unknown to the original system. Look up the system at the position first
+        MMv1System(ctx, lat, lon, false).apply {
+            listener = (object: MMBMS.BMSListener<List<SystemInfo>, BaseResponse> {
+                override fun onData(data: List<SystemInfo>) {
+                    val system = if (data.size == 1) data.first() else data.firstOrNull { s -> s.isExternal }
+                    requestDomainCoverage(ctx, b, lat, lon, system?.takeIf { s -> s.isExternal }, loadingDialog)
+                }
+                override fun onFail(err: BaseResponse) {
+                    requestDomainCoverage(ctx, b, lat, lon, null, loadingDialog)
+                }
+            })
+        }.execute()
+    }
+
+    /**
+     * Checks whether the domain of the selected category covers the position.
+     * Without [system], only the original system is checked
+     */
+    private fun requestDomainCoverage(ctx: Context,
+                                      b: MessageBuilder,
+                                      lat: Double,
+                                      lon: Double,
+                                      system: SystemInfo?,
+                                      loadingDialog: LoadingDialog?) {
         MMv1Domain(ctx, lat, lon, "short").apply {
             // We don't need the whole domain object. Just enough to check for the correct domain id
-            checkOriginalSystemOnly = !MMConstants.ForceUseOverriddenAppId
+            if (system != null) {
+                externalSystemInfo = system
+                checkOriginalSystemOnly = false
+            } else {
+                checkOriginalSystemOnly = !MMConstants.ForceUseOverriddenAppId
+            }
             listener = (object: MMBMS.BMSListener<List<Domain>, BaseResponse> {
                 override fun onData(data: List<Domain>) {
                     val domainFound = data.find { d -> d.id == b.category.domainId }
