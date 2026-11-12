@@ -8,6 +8,13 @@ Releases are published via [JitPack](https://jitpack.io) from the git tags.
 
 ## [Unreleased]
 
+## [1.1.1] - 2026-11-12
+
+### Fixed
+- Links with `force_typeid` for an external system (e.g. sags-doch.de) were
+  always rejected as "not valid at this location", because the category was
+  requested from the default server instead of the external system.
+
 ## [1.1.0] - 2026-11-03
 
 ### Added
@@ -53,7 +60,8 @@ Initial public release.
 - The library builds without a configured Google Maps API key, so it can be
   built on JitPack.
 
-[Unreleased]: https://github.com/wer-denkt-was/maengelmelder-android/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/wer-denkt-was/maengelmelder-android/compare/v1.1.1...HEAD
+[1.1.1]: https://github.com/wer-denkt-was/maengelmelder-android/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/wer-denkt-was/maengelmelder-android/compare/v1.0.3...v1.1.0
 [1.0.3]: https://github.com/wer-denkt-was/maengelmelder-android/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/wer-denkt-was/maengelmelder-android/compare/v1.0.1...v1.0.2
