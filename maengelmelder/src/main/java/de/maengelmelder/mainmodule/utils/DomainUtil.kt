@@ -36,8 +36,9 @@ object DomainUtil {
                     val extOnly = if (data.size == 1) data else data.filter { d -> d.isExternal }
 
                     if (categoryForced) {
-                        // Forced category -> just make sure the category exists
+                        // Forced category -> just make sure the category exists in its system
                         MMv1BmsAppCategory(context, message.category.typeId).apply {
+                            externalSystemInfo = extOnly.firstOrNull()
                             listener = (object : MMBMS.BMSListener<Category?, BaseResponse> {
                                 override fun onData(data: Category?) {
                                     onResult(data != null)
@@ -195,7 +196,9 @@ object DomainUtil {
                                    typeid: Long,
                                    categoryForced: Boolean = false,
                                    onResult: (Category?, Boolean) -> Unit) {
-        MMv1System(context, lat, lon, false).apply {
+        // A forced category is uploaded to the system it was found in. The upload looks the system up
+        // in the database by the category's systemId, so the systems are saved here
+        MMv1System(context, lat, lon, categoryForced).apply {
             listener = (object: MMBMS.BMSListener<List<SystemInfo>, BaseResponse> {
                 override fun onData(data: List<SystemInfo>) {
                     val extOnly = if (data.size == 1) data else data.filter { d -> d.isExternal }
@@ -209,11 +212,13 @@ object DomainUtil {
                             listener = (object: MMBMS.BMSListener<Category?, BaseResponse> {
                                 override fun onData(data: Category?) {
                                     if (data != null) {
+                                        // The upload needs the system of the category
+                                        data.systemId = extOnly[0].generateId()
                                         // If category exists, we trust it's the correct one
                                         onResult(data, true)
                                         // Save the category in DB so we can reference it later
                                         val newDomain = Domain().apply {
-                                            systemId = extOnly[0].appId
+                                            systemId = extOnly[0].generateId()
                                             id = data.domainId
                                             uri = extOnly[0].domainName
                                             name = data.domainText
